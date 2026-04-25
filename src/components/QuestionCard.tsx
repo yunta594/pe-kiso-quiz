@@ -43,15 +43,6 @@ export default function QuestionCard({
       </div>
 
       <div className="px-6 pt-5 pb-2">
-        {/* AI生成問題の出典表示 */}
-        {question.source && (
-          <div className="mb-3 flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
-            <span className="text-amber-500 text-xs mt-0.5 shrink-0">⚠</span>
-            <p className="text-amber-700 text-xs leading-relaxed">
-              {question.source}
-            </p>
-          </div>
-        )}
         {/* 問題文 */}
         <p className="text-[17px] leading-relaxed text-slate-800 whitespace-pre-wrap">
           {question.question}
