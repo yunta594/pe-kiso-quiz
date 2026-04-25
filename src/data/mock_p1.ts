@@ -1,7 +1,5 @@
 import type { Question } from "@/types";
 
-const SRC_GENERAL =
-  "この問題はAIが生成した練習問題です（技術士一次試験 基礎科目の過去問・専門教材に基づき作成、2026年4月時点）";
 
 export const mockP1Questions: Question[] = [
   // ── 1群：設計・計画 ────────────────────────────────────────────────
@@ -26,7 +24,6 @@ export const mockP1Questions: Question[] = [
       "トラフィック密度 ρ ＝ λ/μ ＝ 0.8 ÷ (4/3) ＝ 0.6\n\n" +
       "平均系内列長 L ＝ ρ/(1−ρ) ＝ 0.6/0.4 ＝ 1.5人\n\n" +
       "平均系内滞在時間 W ＝ L/λ ＝ 1.5/0.8 ＝ 1.875min ＝ 112.5秒 ≒ 113秒",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-1-2",
@@ -54,7 +51,6 @@ export const mockP1Questions: Question[] = [
       "（イ）航空宇宙機器：軽量化が最優先のため安全係数は 1.25〜1.5 程度と小さい。\n" +
       "（ウ）医薬品（人体摂取）：毒性や個体差を考慮して安全係数 100 以上が用いられる。\n\n" +
       "したがって （ウ）＞（ア）＞（イ）。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-1-3",
@@ -81,7 +77,6 @@ export const mockP1Questions: Question[] = [
       "正常 1 個：P(1) ＝ C(4,1)×0.8¹×0.2³ ＝ 4×0.8×0.008 ＝ 0.0256\n\n" +
       "系の故障確率 ＝ 0.0016 ＋ 0.0256 ＝ 0.0272\n" +
       "系の信頼度 ＝ 1 − 0.0272 ＝ 0.9728 → ①の範囲（0.95 以上）",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-1-4",
@@ -107,7 +102,6 @@ export const mockP1Questions: Question[] = [
       "（イ）限界荷重（オイラー座屈荷重）を超えると不安定となる。\n" +
       "（ウ）細長い柱の座屈は横たわみを伴う曲げ変形として生じる。\n" +
       "（エ）オイラー座屈荷重 Pcr ＝ π²EI/L² で、長さの2乗に反比例する。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-1-5",
@@ -129,7 +123,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "④が不適切。PL法は無過失責任を採用している。被害者は製造業者の「過失」を立証する必要はなく、①製造物の「欠陥」の存在、②損害の発生、③欠陥と損害の因果関係を立証すれば足りる。\n\n" +
       "①②③⑤はいずれも正しい記述。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-1-6",
@@ -153,7 +146,6 @@ export const mockP1Questions: Question[] = [
       "案B：0.3×0.4 ＋ 0.5×0.4 ＋ 0.4×0.2 ＝ 0.12＋0.20＋0.08 ＝ 0.40（最大）\n" +
       "案C：0.2×0.4 ＋ 0.3×0.4 ＋ 0.3×0.2 ＝ 0.08＋0.12＋0.06 ＝ 0.26\n\n" +
       "案Bが最も大きい。",
-    source: SRC_GENERAL,
   },
 
   // ── 2群：情報・論理 ────────────────────────────────────────────────
@@ -176,7 +168,6 @@ export const mockP1Questions: Question[] = [
       "十の位：(5−1) − 6 ＜ 0 → (8＋4) − 6 ＝ 6 ✓\n" +
       "百の位：2 − 1 ＝ 1 ✓\n\n" +
       "結果：164（8進）→ 一致。8進法。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-2-2",
@@ -205,7 +196,6 @@ export const mockP1Questions: Question[] = [
       "A⊕B ＝ 11010010\n" +
       "A   ＝ 10110100\n" +
       "C   ＝ 10010000",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-2-3",
@@ -227,7 +217,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "⑤が不適切。VPNは通信路の暗号化による秘匿性を高める手段の一つだが、VPN機器自体の脆弱性を突いた攻撃、認証情報の漏洩、設定ミスなど様々なリスクが存在する。「完全に保証」「いかなる攻撃からも安全」は誤り。\n\n" +
       "①〜④はいずれも正しい記述。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-2-4",
@@ -253,7 +242,6 @@ export const mockP1Questions: Question[] = [
       "POP    → [5, 7]（8を取出）\n" +
       "POP    → [5]（7を取出）← 最後のPOP\n\n" +
       "最後のPOPで取り出されるのは7。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-2-5",
@@ -272,7 +260,6 @@ export const mockP1Questions: Question[] = [
       "包除原理：\n\n" +
       "|A∪B∪C| ＝ |A|＋|B|＋|C| − |A∩B| − |A∩C| − |B∩C| ＋ |A∩B∩C|\n\n" +
       "＝ 250＋150＋100 − 50 − 30 − 20 ＋ 10 ＝ 410",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-2-6",
@@ -294,7 +281,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "⑤が不適切。指数時間 O(2ⁿ) はnが大きくなると多項式時間 O(n³) より急激に遅くなる（大きくなる）。nが十分大きい場合は O(2ⁿ) ≫ O(n³) であり、高速ではない。\n\n" +
       "①〜④はいずれも正しい記述。",
-    source: SRC_GENERAL,
   },
 
   // ── 3群：解析 ────────────────────────────────────────────────
@@ -321,7 +307,6 @@ export const mockP1Questions: Question[] = [
       "②×：有意水準は一般に5%（0.05）または1%（0.01）が用いられる。\n" +
       "③×：帰無仮説が真なのに棄却するのは「第1種の誤り（α誤り）」。第2種の誤りは対立仮説が真なのに帰無仮説を棄却しない誤り。\n" +
       "⑤×：p値が有意水準より小さい場合に帰無仮説を棄却する。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-3-2",
@@ -343,7 +328,6 @@ export const mockP1Questions: Question[] = [
       "λ² − 7λ ＋ 10 ＝ 0\n" +
       "(λ − 2)(λ − 5) ＝ 0\n\n" +
       "λ ＝ 2, 5",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-3-3",
@@ -365,7 +349,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "⑤が不適切。数学的に等価な式であっても、計算順序や丸め誤差の蓄積の仕方が異なるため、数値計算では結果が異なることがある（数値的不安定性）。\n\n" +
       "①〜④はいずれも正しい記述。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-3-4",
@@ -385,7 +368,6 @@ export const mockP1Questions: Question[] = [
       "フックの法則 σ ＝ Eε より\n" +
       "ひずみ ε ＝ σ/E ＝ 2.0×10⁷ / 2.0×10¹¹ ＝ 1.0×10⁻⁴\n\n" +
       "伸び ΔL ＝ ε×L ＝ 1.0×10⁻⁴ × 3.0 ＝ 3.0×10⁻⁴ m ＝ 0.30 mm",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-3-5",
@@ -403,7 +385,6 @@ export const mockP1Questions: Question[] = [
       "∂f/∂x ＝ 3x² ＋ 4xy − 3y²\n\n" +
       "点(1, 1)を代入：\n" +
       "∂f/∂x ＝ 3×1² ＋ 4×1×1 − 3×1² ＝ 3 ＋ 4 − 3 ＝ 4",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-3-6",
@@ -420,7 +401,6 @@ export const mockP1Questions: Question[] = [
       "並列抵抗の合成：1/R ＝ 1/R₁ ＋ 1/R₂ ＋ 1/R₃\n\n" +
       "1/R ＝ 1/2 ＋ 1/2 ＋ 1/2 ＝ 3/2\n\n" +
       "R ＝ 2/3 Ω",
-    source: SRC_GENERAL,
   },
 
   // ── 4群：材料・化学・バイオ ────────────────────────────────────────
@@ -449,7 +429,6 @@ export const mockP1Questions: Question[] = [
       "④C₂H₂  ：2/26 ≒ 0.077\n" +
       "⑤C₆H₆  ：6/78 ≒ 0.077\n\n" +
       "H原子の質量比率が最大のメタンが最も多くのH₂Oを生成する。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-4-2",
@@ -471,7 +450,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "⑤が不適切。酢酸ナトリウムは弱酸（酢酸）＋強塩基（NaOH）の塩であり、水溶液は加水分解により塩基性（pH > 7）を示す。「pH < 7（酸性）」という記述は誤り。\n\n" +
       "①〜④はいずれも正しい記述。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-4-3",
@@ -497,7 +475,6 @@ export const mockP1Questions: Question[] = [
       "（イ）結晶粒径が小さいほど粒界が多く転位移動が妨げられ降伏応力が大きくなる（ホール・ペッチの法則）。\n" +
       "（ウ）室温加工で転位密度が増加すると転位同士の相互干渉が増え加工硬化が生じる。\n" +
       "（エ）蓄積された転位密度を低減して軟化させる熱処理は焼なまし（焼鈍）である。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-4-4",
@@ -519,7 +496,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "⑤が不適切。セラミックスは一般に引張強度よりも圧縮強度が「高い」。セラミックスは圧縮に強く引張に弱い（脆性材料）という特性をもつ。\n\n" +
       "①〜④はいずれも正しい記述。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-4-5",
@@ -541,7 +517,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "⑤が不適切。リパーゼは脂質（トリグリセリド）のエステル結合を加水分解する酵素である。デンプン（多糖類）を加水分解するのはアミラーゼである。\n\n" +
       "①〜④はいずれも正しい記述。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-4-6",
@@ -560,7 +535,6 @@ export const mockP1Questions: Question[] = [
       "元の鎖：C ＝ 15%　→　相補鎖のG ＝ 15%\n\n" +
       "二本鎖全体のG ＝ (元の鎖のG ＋ 相補鎖のG) ÷ 2\n" +
       "＝ (35 ＋ 15) ÷ 2 ＝ 25%",
-    source: SRC_GENERAL,
   },
 
   // ── 5群：環境・エネルギー・技術 ───────────────────────────────────
@@ -585,7 +559,6 @@ export const mockP1Questions: Question[] = [
       "④が不適切。「適応策（adaptation）」は、既に起きつつある気候変動の影響に対し被害を回避・軽減する対策（例：防災インフラの強化、品種改良など）である。\n\n" +
       "GHG排出削減により温暖化を食い止めるのは「緩和策（mitigation）」である。\n\n" +
       "①②③⑤はいずれも正しい記述。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP1-I-5-2",
@@ -607,8 +580,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "④が不適切。我が国のプラスチック廃棄物の有効利用率（熱回収含む）は約87%で比較的高水準である。ただしサーマルリカバリー（熱回収）の比率が高く、マテリアルリサイクル・ケミカルリサイクルの割合向上が課題とされている。\n\n" +
       "①②③⑤はいずれも正しい記述。",
-    source:
-      "この問題はAIが生成した練習問題です。出典：環境省「プラスチック資源循環促進法」（2022年施行）等に基づき作成（2026年4月時点）",
   },
   {
     id: "MP1-I-5-3",
@@ -630,8 +601,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "⑤が不適切。第7次エネルギー基本計画には「化石燃料依存度を2040年度までにゼロにする」という目標は設定されていない。化石燃料は当面の間、安定供給の面で一定の役割を担うものとして位置付けられている。\n\n" +
       "①〜④はいずれも正しい記述。",
-    source:
-      "この問題はAIが生成した練習問題です。出典：資源エネルギー庁「第7次エネルギー基本計画」（2025年2月閣議決定）に基づき作成（2026年4月時点）",
   },
   {
     id: "MP1-I-5-4",
@@ -653,8 +622,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "⑤が不適切。日本は世界有数の火山国であり、地熱資源量は世界第3位とされている。「火山がない」という記述は明らかに誤りである。地熱発電は国立・国定公園内での開発制限緩和等により、近年導入拡大が進められている。\n\n" +
       "①〜④はいずれも正しい記述。",
-    source:
-      "この問題はAIが生成した練習問題です。出典：資源エネルギー庁「エネルギー白書2024」等に基づき作成（2026年4月時点）",
   },
   {
     id: "MP1-I-5-5",
@@ -676,7 +643,6 @@ export const mockP1Questions: Question[] = [
     explanation:
       "⑤が不適切。サイクロトロンを発明したのはアーネスト・ローレンス（1932年）である。エジソンの代表的発明は白熱電球・蓄音機・映写機などであり、直流送電システムを推進した人物でもある。\n\n" +
       "①〜④はいずれも正しい記述。",
-    source: SRC_GENERAL,
     tags: ["科学技術史"],
   },
   {
@@ -702,7 +668,6 @@ export const mockP1Questions: Question[] = [
       "③×：第6期は2021〜2025年度が対象期間である。\n" +
       "④×：2020年改正（科学技術・イノベーション基本法、2021年4月施行）により人文・社会科学も振興対象に含められ「総合知」の活用が掲げられた。\n" +
       "⑤×：「ポストドクター等1万人支援計画」は第1期（1996〜2000年度）の施策である。",
-    source: SRC_GENERAL,
     tags: ["科学技術史"],
   },
 ];

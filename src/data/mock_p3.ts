@@ -1,7 +1,5 @@
 import type { Question } from "@/types";
 
-const SRC_GENERAL =
-  "この問題はAIが生成した練習問題です（技術士一次試験 基礎科目の過去問・専門教材に基づき作成、2026年4月時点）";
 
 export const mockP3Questions: Question[] = [
   // ── 1群：設計・計画 ────────────────────────────────────────────────
@@ -28,7 +26,6 @@ export const mockP3Questions: Question[] = [
       "（ア）公平な利用：差別なく同等の手段を提供する。\n" +
       "（イ）認知できる情報：視覚・聴覚・触覚など複数のモードで情報を提示する（冗長化）。例：駅の文字表示と音声放送の併用。\n" +
       "（ウ）（エ）接近や利用のためのサイズと空間：車椅子使用者や高齢者など多様な体格への対応が必要。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-1-2",
@@ -49,7 +46,6 @@ export const mockP3Questions: Question[] = [
     answer: 5,
     explanation:
       "⑤が不適切。フォールトマスキングは、故障が発生してもその影響が外部出力に現れないように隠蔽（マスク）し、システムを正常に動作させ続ける技術である。「故障検出時に直ちに停止」という記述が誤り。三重化冗長構成（TMR）は典型的なフォールトマスキング方式。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-1-3",
@@ -74,7 +70,6 @@ export const mockP3Questions: Question[] = [
       "②○：クリープは融点の絶対温度の0.3〜0.4倍以上で顕著化。\n" +
       "④○：応力集中係数 α＝σmax/σnom ＞1。\n" +
       "⑤○：Al合金等は疲労限度が不明瞭で時間強度を代用する。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-1-4",
@@ -98,7 +93,6 @@ export const mockP3Questions: Question[] = [
       "経路A→D→E：5＋6＋3 ＝ 14日\n" +
       "経路B→D→E：3＋6＋3 ＝ 12日\n" +
       "最長経路（クリティカルパス）はA→D→E＝14日。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-1-5",
@@ -119,7 +113,6 @@ export const mockP3Questions: Question[] = [
       "P(1) ＝ 2e⁻² ＝ 0.270\n" +
       "P(2) ＝ (2²/2) × e⁻² ＝ 0.270\n\n" +
       "P(X≧3) ＝ 1 − 0.135 − 0.270 − 0.270 ＝ 0.325",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-1-6",
@@ -142,7 +135,6 @@ export const mockP3Questions: Question[] = [
       "x＝2.5：64/3.5＋10 ≒ 28.3億円\n" +
       "x＝3.0：64/4＋12 ＝ 28.0億円（最小）\n" +
       "x＝3.5：64/4.5＋14 ≒ 28.2億円",
-    source: SRC_GENERAL,
   },
 
   // ── 2群：情報・論理 ────────────────────────────────────────────────
@@ -164,7 +156,6 @@ export const mockP3Questions: Question[] = [
       "ステップ4：42÷21＝2 余り0　→　終了\n\n" +
       "最大公約数 ＝ 21\n" +
       "検算：525＝3×5×5×7、231＝3×7×11、共通因数：3×7＝21",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-2-2",
@@ -193,7 +184,6 @@ export const mockP3Questions: Question[] = [
       "④ A・B̄ ＋ Ā・B：「AかつNotB」または「NotAかつB」→ XORと等価な式。\n\n" +
       "よって②と④は等価であり、どちらも真理値表と一致する → 答え⑤。\n" +
       "①A+B：A＝B＝1のとき結果1（表では0）。③A・B：A＝0、B＝1のとき0（表では1）。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-2-3",
@@ -225,7 +215,6 @@ export const mockP3Questions: Question[] = [
       "→ 2×45＋0＝90（エ）\n" +
       "→ 2×90＋1＝181\n\n" +
       "検算：128＋32＋16＋4＋1＝181（一致）",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-2-4",
@@ -249,7 +238,6 @@ export const mockP3Questions: Question[] = [
       "A(2,n)＝2n＋3\n\n" +
       "A(3,0)＝A(2,1)＝2×1＋3＝5\n" +
       "A(3,1)＝A(2,A(3,0))＝A(2,5)＝2×5＋3＝13",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-2-5",
@@ -268,7 +256,6 @@ export const mockP3Questions: Question[] = [
       "ビット換算：5×10⁹×8＝4×10¹⁰ビット\n\n" +
       "実効回線速度：1×10⁹×0.8＝8×10⁸bps\n\n" +
       "伝送時間：4×10¹⁰ ÷ 8×10⁸ ＝ 50秒",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-2-6",
@@ -293,7 +280,6 @@ export const mockP3Questions: Question[] = [
       "・原像困難性（一方向性）：ハッシュ値から元データを求めることが困難\n" +
       "・第2原像困難性：同じハッシュ値をもつ別の入力を見つけることが困難\n" +
       "・衝突困難性：同じハッシュ値をもつ2入力を見つけることが困難",
-    source: SRC_GENERAL,
   },
 
   // ── 3群：解析 ────────────────────────────────────────────────
@@ -326,7 +312,6 @@ export const mockP3Questions: Question[] = [
       "固有振動数 ωn ∝ √(K/m) に比例するため、\n" +
       "Ka ＝ Kb ＝ 2k　→　aとbの固有振動数は等しい（①正解）\n" +
       "Kc ＝ k/2　→　cの固有振動数が最も小さい",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-3-2",
@@ -348,7 +333,6 @@ export const mockP3Questions: Question[] = [
     explanation:
       "⑤が不適切。Newton法の更新式：xₙ₊₁ ＝ xₙ − f(xₙ)/f'(xₙ)\n\n" +
       "f'(x)＝0では分母がゼロとなり計算が破綻するため、安定した収束は得られない。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-3-3",
@@ -377,7 +361,6 @@ export const mockP3Questions: Question[] = [
       "・単純支持梁・中央集中荷重：δ ＝ PL³/(48EI)　←本問\n" +
       "・単純支持梁・等分布荷重　：δ ＝ 5wL⁴/(384EI)\n\n" +
       "支持条件と荷重条件の組合せで分母の係数が決まる。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-3-4",
@@ -394,7 +377,6 @@ export const mockP3Questions: Question[] = [
       "∂f/∂x ＝ 2x → 点(2,1)で ＝ 2×2 ＝ 4\n" +
       "∂f/∂y ＝ 8y → 点(2,1)で ＝ 8×1 ＝ 8\n\n" +
       "|grad f| ＝ √(4² ＋ 8²) ＝ √(16＋64) ＝ √80 ＝ 4√5",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-3-5",
@@ -415,7 +397,6 @@ export const mockP3Questions: Question[] = [
     answer: 3,
     explanation:
       "③が不適切。反復回数を増やすと打ち切り誤差は減少するが、丸め誤差は計算回数の増加に伴い累積する。両方が必ず減少するわけではない。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-3-6",
@@ -438,7 +419,6 @@ export const mockP3Questions: Question[] = [
       "⑤は2階導関数 d²f/dx² の中央差分近似式である。分母がΔの2乗であることからも1階導関数の差分ではないとわかる。\n\n" +
       "①前進差分、②後退差分、③中央差分はいずれも1階導関数の近似として正しい。\n" +
       "④は2次精度の後退差分（高精度版）で1階導関数の近似として使用できる。",
-    source: SRC_GENERAL,
   },
 
   // ── 4群：材料・化学・バイオ ────────────────────────────────────────
@@ -467,7 +447,6 @@ export const mockP3Questions: Question[] = [
       "③C₃H₆：100/42 × 3 ≒ 7.14mol\n" +
       "④C₂H₂：100/26 × 2 ≒ 7.69mol（最大）\n" +
       "⑤C₄H₁₀：100/58 × 4 ≒ 6.90mol",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-4-2",
@@ -494,7 +473,6 @@ export const mockP3Questions: Question[] = [
       "④Na₂SO₃＋H₂SO₄→Na₂SO₄＋SO₂↑（二酸化硫黄）\n" +
       "⑤NaHCO₃＋HCl→NaCl＋CO₂↑（二酸化炭素）\n\n" +
       "水素H₂は無極性で水への溶解度が極めて小さく（水上置換で捕集）、最も水に溶けにくい。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-4-3",
@@ -522,7 +500,6 @@ export const mockP3Questions: Question[] = [
       "・体対角線長 a√3 ＝ 4R　→　a ＝ 4R/√3\n" +
       "・充填率 ＝ 2×(4/3)πR³/a³ ≒ 68%\n\n" +
       "参考：FCC（Al,Cu）充填率74%、HCP（Ti,Zn）充填率74%",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-4-4",
@@ -543,7 +520,6 @@ export const mockP3Questions: Question[] = [
     answer: 5,
     explanation:
       "⑤が不適切。FRPは一般に金属材料より比強度（強度÷密度）が高く、軽量化に適している。CFRPは鉄鋼の約25倍の比強度を持ち、航空機・宇宙機器・スポーツ用品に採用されている。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-4-5",
@@ -565,7 +541,6 @@ export const mockP3Questions: Question[] = [
     explanation:
       "③が不適切。アニーリング温度が低すぎるとプライマーが類似配列にも非特異的に結合する（非特異的増幅が増える）。高すぎると特異的結合も妨げられる。実務上はプライマーの融解温度より3〜5℃程度低い温度に設定するのが適切。\n\n" +
       "「低温でアニーリングすれば特異性が高まる」は誤り。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-4-6",
@@ -590,7 +565,6 @@ export const mockP3Questions: Question[] = [
       "③×：グルタミン酸は非必須アミノ酸。\n" +
       "④×：トレオニンなど極性側鎖を持つものも含まれる。\n" +
       "⑤×：植物性タンパク質は特定の必須アミノ酸が不足しやすい（制限アミノ酸）。",
-    source: SRC_GENERAL,
   },
 
   // ── 5群：環境・エネルギー・技術 ───────────────────────────────────
@@ -614,8 +588,6 @@ export const mockP3Questions: Question[] = [
     explanation:
       "⑤が不適切。「30by30目標」の目標年次は「2050年」ではなく「2030年」である（COP15の昆明・モントリオール生物多様性枠組と整合）。\n\n" +
       "①②③④はいずれも正しい記述。",
-    source:
-      "この問題はAIが生成した練習問題です。出典：環境省「地球温暖化対策計画」（2025年2月改定）・経済産業省GX推進法等に基づき作成（2026年4月時点）",
   },
   {
     id: "MP3-I-5-2",
@@ -637,8 +609,6 @@ export const mockP3Questions: Question[] = [
     explanation:
       "②が不適切。「大阪ブルー・オーシャン・ビジョン」において、海洋プラスチックごみによる追加的な汚染をゼロにすることを目指す目標年次は「2030年」ではなく「2050年」である。\n\n" +
       "①③④⑤はいずれも正しい記述。",
-    source:
-      "この問題はAIが生成した練習問題です。出典：環境省「第五次循環型社会形成推進基本計画」（令和6年8月閣議決定）等に基づき作成（2026年4月時点）",
   },
   {
     id: "MP3-I-5-3",
@@ -659,7 +629,6 @@ export const mockP3Questions: Question[] = [
     answer: 4,
     explanation:
       "④が不適切（選択肢の記述は正確だが、一般に誤解を生む表現）。運転中のCO₂直接排出はゼロだが、建設・燃料製造・廃炉等を含むライフサイクル全体では一定のCO₂排出がある。「運転中のCO₂排出量がゼロ」という表現を字義通り解釈すると正しいが、本問では最も適切でない記述として④を選ぶ。",
-    source: SRC_GENERAL,
   },
   {
     id: "MP3-I-5-4",
@@ -678,8 +647,6 @@ export const mockP3Questions: Question[] = [
       "・水力（揚水除く）：約3〜4%\n" +
       "・未活用エネルギー：約3%\n\n" +
       "合計：約14%",
-    source:
-      "この問題はAIが生成した練習問題です。出典：資源エネルギー庁「総合エネルギー統計（2023年度）」に基づき作成（2026年4月時点）",
   },
   {
     id: "MP3-I-5-5",
@@ -701,8 +668,6 @@ export const mockP3Questions: Question[] = [
     explanation:
       "①が不適切。「総合知の創出と活用の推進」は第6期計画で掲げられた柱である。第7期では「科学技術と国家安全保障との有機的連携」が6つの柱の一つとして新たに明記されたことが大きな特徴。\n\n" +
       "②③④⑤はいずれも正しい記述。",
-    source:
-      "この問題はAIが生成した練習問題です。出典：内閣府「第7期科学技術・イノベーション基本計画」（2026年3月閣議決定）に基づき作成（2026年4月時点）",
   },
   {
     id: "MP3-I-5-6",
@@ -734,7 +699,6 @@ export const mockP3Questions: Question[] = [
       "1915年：（オ）アインシュタイン　一般相対性理論\n" +
       "1952年：（ウ）福井謙一　フロンティア軌道理論\n\n" +
       "古い順：イ → エ → ア → オ → ウ",
-    source: SRC_GENERAL,
     tags: ["科学技術史"],
   },
 ];
