@@ -124,9 +124,6 @@ export default function Home() {
             <span className="w-1 h-5 bg-amber-500 rounded inline-block" />
             練習問題（模擬試験）
           </h2>
-          <p className="text-xs text-slate-400 mb-4">
-            ※ 練習問題はAIが生成した問題を含みます。問題カードに出典を表示しています。
-          </p>
           <div className="grid gap-3">
             {Object.entries(MOCK_LABELS).map(([key, label]) => {
               const count = questionsByMock[key]?.length ?? 0;
@@ -142,9 +139,6 @@ export default function Home() {
                       <p className="font-bold text-[17px] text-slate-800 group-hover:text-amber-700 transition-colors">
                         {label}
                       </p>
-                      <span className="text-[11px] bg-amber-100 text-amber-700 font-medium px-2 py-0.5 rounded-full">
-                        AI生成含む
-                      </span>
                     </div>
                     <p className="text-sm text-slate-400">{count}問収録</p>
                   </div>
