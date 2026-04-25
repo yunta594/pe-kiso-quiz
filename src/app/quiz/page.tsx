@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import type { Question } from "@/types";
 import { getQuestions, YEAR_LABELS, GROUP_LABELS, MOCK_LABELS } from "@/data";
@@ -13,7 +13,7 @@ import Link from "next/link";
 
 type Phase = "setup" | "quiz" | "result";
 
-export default function QuizPage() {
+function QuizContent() {
   const params = useSearchParams();
   const mode = params.get("mode") ?? "random";
   const filter = params.get("filter") ?? "all";
@@ -176,5 +176,13 @@ export default function QuizPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function QuizPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-slate-100 flex items-center justify-center"><p className="text-slate-500">読み込み中...</p></div>}>
+      <QuizContent />
+    </Suspense>
   );
 }
