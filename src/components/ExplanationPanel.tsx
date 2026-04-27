@@ -81,7 +81,7 @@ export default function ExplanationPanel({
           isCorrect ? "bg-green-500" : "bg-red-500"
         }`}
       >
-        <span className="text-2xl">{isCorrect ? "✓" : "✗"}</span>
+        <span className="text-2xl font-bold">{isCorrect ? "○" : "×"}</span>
         <div>
           <p className="text-white font-bold text-lg">
             {isCorrect ? "正解！" : "不正解"}
