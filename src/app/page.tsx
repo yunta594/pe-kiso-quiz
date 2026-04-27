@@ -6,15 +6,9 @@ import {
   questionsByYear,
   questionsByGroup,
   questionsByMock,
-  allQuestions,
-  mockQuestions,
 } from "@/data";
 
 export default function Home() {
-  const scienceHistoryCount = [...allQuestions, ...mockQuestions].filter(
-    (q) => q.tags?.includes("科学技術史")
-  ).length;
-
   return (
     <div className="min-h-screen bg-slate-100">
       {/* ヘッダー */}
@@ -94,28 +88,26 @@ export default function Home() {
         {/* テーマ別 */}
         <section>
           <h2 className="text-lg font-bold text-[#1e3a5f] mb-4 flex items-center gap-2">
-            <span className="w-1 h-5 bg-blue-600 rounded inline-block" />
+            <span className="w-1 h-5 bg-amber-500 rounded inline-block" />
             テーマ別で学習する
           </h2>
-          <div className="grid gap-3">
-            <Link
-              href="/quiz?mode=topic&filter=科学技術史"
-              className="bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-400
-                rounded-xl px-5 py-4 flex items-center justify-between transition-all group"
-            >
-              <div>
-                <p className="font-bold text-[17px] text-slate-800 group-hover:text-amber-700 transition-colors">
-                  科学技術史
-                </p>
-                <p className="text-sm text-slate-400 mt-0.5">
-                  過去問＋練習問題 {scienceHistoryCount}問収録
-                </p>
-              </div>
-              <span className="text-slate-300 group-hover:text-amber-400 text-2xl transition-colors">
-                ›
-              </span>
-            </Link>
-          </div>
+          <Link
+            href="/topics"
+            className="bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-400
+              rounded-xl px-5 py-4 flex items-center justify-between transition-all group"
+          >
+            <div>
+              <p className="font-bold text-[17px] text-slate-800 group-hover:text-amber-700 transition-colors">
+                テーマを選ぶ
+              </p>
+              <p className="text-sm text-slate-400 mt-0.5">
+                確率・統計・アルゴリズム・科学技術史 など
+              </p>
+            </div>
+            <span className="text-slate-300 group-hover:text-amber-400 text-2xl transition-colors">
+              ›
+            </span>
+          </Link>
         </section>
 
         {/* 練習問題（模擬試験） */}

@@ -59,7 +59,7 @@ export default function QuestionCard({
             disabled={answered}
           >
             <span className="font-bold mr-2 text-blue-700">{NUMS[idx]}</span>
-            <span>{choice}</span>
+            <span>{choice.replace(/^[①②③④⑤]\s*/, "")}</span>
           </button>
         ))}
       </div>

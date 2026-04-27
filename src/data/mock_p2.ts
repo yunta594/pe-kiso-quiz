@@ -6,7 +6,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-1-1",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 1,
     groupLabel: "1群：設計・計画",
     number: 1,
@@ -29,7 +29,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-1-2",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 1,
     groupLabel: "1群：設計・計画",
     number: 2,
@@ -52,7 +52,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-1-3",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 1,
     groupLabel: "1群：設計・計画",
     number: 3,
@@ -79,7 +79,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-1-4",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 1,
     groupLabel: "1群：設計・計画",
     number: 4,
@@ -103,7 +103,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-1-5",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 1,
     groupLabel: "1群：設計・計画",
     number: 5,
@@ -125,7 +125,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-1-6",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 1,
     groupLabel: "1群：設計・計画",
     number: 6,
@@ -151,7 +151,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-2-1",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 2,
     groupLabel: "2群：情報・論理",
     number: 1,
@@ -171,7 +171,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-2-2",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 2,
     groupLabel: "2群：情報・論理",
     number: 2,
@@ -200,7 +200,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-2-3",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 2,
     groupLabel: "2群：情報・論理",
     number: 3,
@@ -222,7 +222,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-2-4",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 2,
     groupLabel: "2群：情報・論理",
     number: 4,
@@ -243,7 +243,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-2-5",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 2,
     groupLabel: "2群：情報・論理",
     number: 5,
@@ -262,7 +262,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-2-6",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 2,
     groupLabel: "2群：情報・論理",
     number: 6,
@@ -284,7 +284,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-3-1",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 3,
     groupLabel: "3群：解析",
     number: 1,
@@ -303,7 +303,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-3-2",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 3,
     groupLabel: "3群：解析",
     number: 2,
@@ -322,7 +322,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-3-3",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 3,
     groupLabel: "3群：解析",
     number: 3,
@@ -346,7 +346,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-3-4",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 3,
     groupLabel: "3群：解析",
     number: 4,
@@ -373,7 +373,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-3-5",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 3,
     groupLabel: "3群：解析",
     number: 5,
@@ -398,7 +398,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-3-6",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 3,
     groupLabel: "3群：解析",
     number: 6,
@@ -428,7 +428,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-4-1",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 4,
     groupLabel: "4群：材料・化学・バイオ",
     number: 1,
@@ -454,7 +454,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-4-2",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 4,
     groupLabel: "4群：材料・化学・バイオ",
     number: 2,
@@ -481,7 +481,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-4-3",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 4,
     groupLabel: "4群：材料・化学・バイオ",
     number: 3,
@@ -508,7 +508,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-4-4",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 4,
     groupLabel: "4群：材料・化学・バイオ",
     number: 4,
@@ -532,7 +532,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-4-5",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 4,
     groupLabel: "4群：材料・化学・バイオ",
     number: 5,
@@ -556,7 +556,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-4-6",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 4,
     groupLabel: "4群：材料・化学・バイオ",
     number: 6,
@@ -584,7 +584,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-5-1",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 5,
     groupLabel: "5群：環境・エネルギー・技術",
     number: 1,
@@ -608,7 +608,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-5-2",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 5,
     groupLabel: "5群：環境・エネルギー・技術",
     number: 2,
@@ -630,7 +630,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-5-3",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 5,
     groupLabel: "5群：環境・エネルギー・技術",
     number: 3,
@@ -654,7 +654,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-5-4",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 5,
     groupLabel: "5群：環境・エネルギー・技術",
     number: 4,
@@ -676,7 +676,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-5-5",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 5,
     groupLabel: "5群：環境・エネルギー・技術",
     number: 5,
@@ -698,7 +698,7 @@ export const mockP2Questions: Question[] = [
   {
     id: "MP2-I-5-6",
     year: "MP2",
-    yearLabel: "模擬試験（パターン2）",
+    yearLabel: "実力テスト ver.2",
     group: 5,
     groupLabel: "5群：環境・エネルギー・技術",
     number: 6,
