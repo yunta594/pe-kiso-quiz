@@ -104,7 +104,7 @@ export default function ResultScreen({
                     </span>
                     <div className="flex gap-3 text-sm">
                       <span className="text-red-600 font-medium">
-                        あなた: {userAns ? NUMS[userAns - 1] : "未回答"}
+                        回答: {userAns ? NUMS[userAns - 1] : "未回答"}
                       </span>
                       <span className="text-green-700 font-bold">
                         正解: {NUMS[q.answer - 1]}
