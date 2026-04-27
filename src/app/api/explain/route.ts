@@ -29,7 +29,7 @@ ${explanation}
 
 技術士試験を目指す方に役立つ、具体的で丁寧な解説をお願いします。`;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
     const result = await model.generateContent(prompt);
     const text = result.response.text();
 
