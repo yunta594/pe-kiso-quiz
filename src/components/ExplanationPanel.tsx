@@ -78,20 +78,17 @@ export default function ExplanationPanel({
       {/* 正誤バナー */}
       <div
         className={`px-6 py-4 flex items-center gap-3 ${
-          isCorrect ? "bg-green-500" : "bg-red-500"
+          isCorrect ? "bg-green-500" : "bg-rose-500"
         }`}
       >
-        <span className="text-2xl font-bold">{isCorrect ? "○" : "×"}</span>
-        <div>
-          <p className="text-white font-bold text-lg">
-            {isCorrect ? "正解！" : "不正解"}
-          </p>
-          {!isCorrect && (
-            <p className="text-white/90 text-sm">
-              正解：{NUMS[question.answer - 1]}
-            </p>
-          )}
-        </div>
+        <span className="text-2xl font-bold text-white">
+          {isCorrect ? "○" : "×"}
+        </span>
+        <p className="text-white font-bold text-lg">
+          {isCorrect
+            ? `正解　${NUMS[question.answer - 1]}`
+            : `不正解　正解は ${NUMS[question.answer - 1]}`}
+        </p>
       </div>
 
       {/* 解説 */}
