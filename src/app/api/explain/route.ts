@@ -35,9 +35,10 @@ ${explanation}
 
     return NextResponse.json({ explanation: text });
   } catch (error) {
-    console.error("AI explain error:", error);
+    const msg = error instanceof Error ? error.message : String(error);
+    console.error("AI explain error:", msg);
     return NextResponse.json(
-      { error: "解説の生成に失敗しました。" },
+      { error: `解説の生成に失敗しました。(${msg})` },
       { status: 500 }
     );
   }
