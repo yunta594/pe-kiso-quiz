@@ -44,11 +44,11 @@ export default function ExplanationPanel({
           explanation: question.explanation,
         }),
       });
-      if (!res.ok) throw new Error("API error");
       const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "API error");
       setAiExplanation(data.explanation);
-    } catch {
-      setAiError("解説の生成に失敗しました。しばらく後でお試しください。");
+    } catch (e) {
+      setAiError(e instanceof Error ? e.message : "解説の生成に失敗しました。");
     } finally {
       setLoading(false);
     }
