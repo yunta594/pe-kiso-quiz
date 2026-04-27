@@ -72,13 +72,13 @@ export default function ExplanationPanel({
   return (
     <div
       className={`rounded-2xl border-2 overflow-hidden shadow-sm ${
-        isCorrect ? "border-green-400" : "border-red-400"
+        isCorrect ? "border-blue-400" : "border-rose-400"
       }`}
     >
       {/* 正誤バナー */}
       <div
         className={`px-6 py-4 flex items-center gap-3 ${
-          isCorrect ? "bg-green-500" : "bg-rose-500"
+          isCorrect ? "bg-blue-600" : "bg-rose-500"
         }`}
       >
         <span className="text-2xl font-bold text-white">
