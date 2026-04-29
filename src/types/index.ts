@@ -9,6 +9,7 @@ export interface Question {
   choices: string[];
   answer: number;
   explanation: string;
+  image?: string;
   tags?: string[];
   source?: string;
 }
