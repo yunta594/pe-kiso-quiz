@@ -253,6 +253,7 @@ export const r07Questions: Question[] = [
     group: 3,
     groupLabel: "解析に関するもの",
     number: 1,
+    image: "/images/r7-3-1.png",
     question:
       "行列 A＝\n｜1  a  a²｜\n｜0  1   a｜\n｜0  0   1｜\nの逆行列として、最も適切なものはどれか。なお、aは0でない実数とする。",
     choices: [
@@ -294,6 +295,7 @@ export const r07Questions: Question[] = [
     group: 3,
     groupLabel: "解析に関するもの",
     number: 3,
+    image: "/images/r7-3-3.png",
     question:
       "関数 y＝f(x) をaからcの区間で定積分した値を、シンプソン法（2次のニュートン・コーツの閉公式）により近似的に求めたい。このときに用いる式として、最も適切なものはどれか。ただし、a、b、cはx軸上に等間隔（幅h）に並んだ点である。",
     choices: [
@@ -314,6 +316,7 @@ export const r07Questions: Question[] = [
     group: 3,
     groupLabel: "解析に関するもの",
     number: 4,
+    image: "/images/r7-3-4.png",
     question:
       "同じ材質と断面積を持つ一様な弾性体の棒があり、両端で固定されている。この棒の左端から長さL、右端から長さ4Lの位置Cに力Pが作用する（力は右向きを正とする）。\n\n支持点AとBで棒に作用する反力PAとPBの組合せとして、最も適切なものはどれか。",
     choices: [
@@ -334,6 +337,7 @@ export const r07Questions: Question[] = [
     group: 3,
     groupLabel: "解析に関するもの",
     number: 5,
+    image: "/images/r7-3-5.png",
     question:
       "一辺の抵抗がRの導線を用いて3種類の正四面体回路(a), (b), (c)を製作した。(a), (b), (c)の各回路におけるAB間の合成抵抗の大きさをそれぞれRa, Rb, Rcとするとき、Ra, Rb, Rcの大小関係として、最も適切なものはどれか。\n\n回路(a)：A, Bはいずれも正四面体の頂点\n回路(b)：Aは正四面体の頂点、BはAに接続されていない辺の中点\n回路(c)：A, Bはそれぞれ正四面体の対辺（共通頂点を持たない辺）の中点\n\nなお、回路(b)のB点、回路(c)のA, B点は、それぞれ導線の中点とする。",
     choices: [
@@ -355,6 +359,7 @@ export const r07Questions: Question[] = [
     group: 3,
     groupLabel: "解析に関するもの",
     number: 6,
+    image: "/images/r7-3-6.png",
     question:
       "間隔Lで平行に置かれた2本のレール上に、レールと垂直に置かれた導体abがある。磁束密度Bの一様な磁界がレール面に垂直に加えられており、導体abはプーリを介して質量Mのおもりと接続されている。抵抗Rが回路に接続されており、導体abの質量と電気抵抗は無視できるものとする。\n\n重力の作用によりおもりが落下し、導体abが一定の速度vで運動を続けるとする。その速度vとして、最も適切なものはどれか。なお、重力加速度をgとする。",
     choices: [
