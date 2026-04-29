@@ -15,12 +15,13 @@ interface Props {
   filter: string;
   filterLabel: string;
   onStart: (groups: number[], count: number) => void;
+  onStartExam?: () => void;
 }
 
 const COUNT_OPTIONS = [6, 10, 15, 30] as const;
 const ALL_GROUPS = [1, 2, 3, 4, 5];
 
-export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props) {
+export default function QuizSetup({ mode, filter, filterLabel, onStart, onStartExam }: Props) {
   const isGroupMode = mode === "group";
   const isTopicMode = mode === "topic";
   const showGroupSelect = !isGroupMode && !isTopicMode;
@@ -179,6 +180,19 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props)
               })}
             </div>
           </div>
+
+          {/* 本試験 Ver.（実力テストモードのみ） */}
+          {mode === "mock" && onStartExam && (
+            <div className="pt-2 border-t border-slate-100">
+              <p className="text-xs text-slate-400 mb-2">本番形式で練習する</p>
+              <button
+                onClick={onStartExam}
+                className="w-full py-3.5 rounded-xl font-bold text-base bg-amber-500 hover:bg-amber-600 text-white transition-colors shadow-sm"
+              >
+                本試験 Ver. → 各群から3問を選択（全15問）
+              </button>
+            </div>
+          )}
         </div>
       </div>
 

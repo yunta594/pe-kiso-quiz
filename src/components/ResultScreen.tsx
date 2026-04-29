@@ -7,8 +7,9 @@ interface Props {
   questions: Question[];
   answers: (number | null)[];
   filterLabel: string;
-  mode: string;
   onRetry: () => void;
+  onReview?: () => void;
+  isExam?: boolean;
 }
 
 const NUMS = ["①", "②", "③", "④", "⑤"];
@@ -17,21 +18,22 @@ export default function ResultScreen({
   questions,
   answers,
   filterLabel,
-  mode,
   onRetry,
+  onReview,
+  isExam,
 }: Props) {
   const correctCount = answers.filter(
     (a, i) => a === questions[i].answer
   ).length;
   const total = questions.length;
   const pct = Math.round((correctCount / total) * 100);
+  const passThreshold = isExam ? 50 : 60;
+  const isPass = pct >= passThreshold;
 
   const wrongIndices = answers
     .map((a, i) => ({ i, correct: a === questions[i].answer }))
     .filter((x) => !x.correct)
     .map((x) => x.i);
-
-  const isPastExam = mode === "year" || mode === "group";
 
   return (
     <div className="space-y-6">
@@ -45,7 +47,7 @@ export default function ResultScreen({
           <div className="inline-flex flex-col items-center">
             <div
               className={`text-6xl font-bold mb-2 ${
-                pct >= 60 ? "text-green-600" : "text-red-500"
+                isPass ? "text-green-600" : "text-red-500"
               }`}
             >
               {pct}
@@ -54,16 +56,23 @@ export default function ResultScreen({
             <p className="text-2xl text-slate-700 font-semibold">
               {correctCount} / {total} 問 正解
             </p>
+            {isExam && (
+              <p className="text-xs text-slate-400 mt-1">
+                合格ライン：{passThreshold}%（{Math.ceil(total * passThreshold / 100)}問以上）
+              </p>
+            )}
             <p
               className={`mt-3 text-base font-bold px-4 py-1.5 rounded-full ${
-                pct >= 60
+                isPass
                   ? "bg-green-100 text-green-700"
                   : "bg-red-100 text-red-700"
               }`}
             >
-              {pct >= 80
+              {isExam
+                ? (isPass ? "合格！" : "不合格...")
+                : pct >= 80
                 ? "優秀！"
-                : pct >= 60
+                : isPass
                 ? "合格ライン到達"
                 : "もう少し頑張りましょう"}
             </p>
@@ -74,11 +83,17 @@ export default function ResultScreen({
             <div className="w-full h-4 bg-slate-200 rounded-full overflow-hidden">
               <div
                 className={`h-full rounded-full transition-all duration-700 ${
-                  pct >= 60 ? "bg-green-500" : "bg-red-400"
+                  isPass ? "bg-green-500" : "bg-red-400"
                 }`}
                 style={{ width: `${pct}%` }}
               />
             </div>
+            {isExam && (
+              <div
+                className="absolute top-0 h-4 w-0.5 bg-slate-500 opacity-50"
+                style={{ left: `${passThreshold}%` }}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -123,14 +138,14 @@ export default function ResultScreen({
 
       {/* ボタン群 */}
       <div className="flex gap-3 flex-col">
-        {/* 練習問題に進む（過去問モード時のみ） */}
-        {isPastExam && (
-          <Link
-            href="/quiz?mode=mock&filter=all"
-            className="w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 rounded-xl text-base transition-colors shadow-md"
+        {/* 復習する（間違えた問題がある場合） */}
+        {onReview && wrongIndices.length > 0 && (
+          <button
+            onClick={onReview}
+            className="w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-4 rounded-xl text-base transition-colors shadow-md"
           >
-            練習問題に進む →
-          </Link>
+            復習する（{wrongIndices.length}問）→
+          </button>
         )}
 
         <div className="flex gap-3 flex-col sm:flex-row">

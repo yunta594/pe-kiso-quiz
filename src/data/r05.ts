@@ -1,4 +1,4 @@
-import type { Question } from "@/types";
+﻿import type { Question } from "@/types";
 
 export const r05Questions: Question[] = [
   // ===== 1群：設計・計画 =====
@@ -287,6 +287,7 @@ export const r05Questions: Question[] = [
     answer: 2,
     explanation:
       "領域R：0≤x≤1、0≤y≤√(1－x²) は、単位円（x²＋y²≤1）の第1象限の部分。\n\n∬_R x dxdy ＝ ∫₀¹ x [∫₀^√(1-x²) dy] dx ＝ ∫₀¹ x√(1－x²) dx\n\nt＝1－x²とおくと dt＝－2x dx、x dx＝－dt/2\n∫₀¹ x√(1－x²) dx ＝ ∫₁⁰ √t・(－dt/2) ＝ (1/2)∫₀¹ √t dt ＝ (1/2)×[（2/3）t^(3/2)]₀¹ ＝ 1/3\n\nよって②1/3が正解。",
+    image: "/images/r5-3-2.png",
   },
   {
     id: "R05-I-3-3",
@@ -347,6 +348,7 @@ export const r05Questions: Question[] = [
     answer: 2,
     explanation:
       "変速機の速度比が1：1/nなので、出力軸がω₁からω₂へ変化するとき、モータ（入力軸）はnω₁からnω₂へ変化する。\n\n出力軸の角加速度：α_out＝(ω₂－ω₁)/T\n\n出力軸に必要なトルク：τ_out＝I×α_out＝I×(ω₂－ω₁)/T\n\n変速機の入出力トルク比は速度比の逆数（効率100%）なので：\nτ_motor＝τ_out/n＝(1/n)×I×(ω₂－ω₁)/T\n\nよって②が正解。",
+    image: "/images/r5-3-5.png",
   },
   {
     id: "R05-I-3-6",
@@ -367,6 +369,7 @@ export const r05Questions: Question[] = [
     answer: 3,
     explanation:
       "各回路の最短経路長（導線の本数）で比較する：\n・回路(a)：最短経路3L → Ra＝3r相当\n・回路(b)：最短経路4L → Rb＝4r相当（最も大きい）\n・回路(c)：最短経路3Lだが並列経路があるため → Rc＜Ra\n\nよって Rc＜Ra＜Rb、③が正解。",
+    image: "/images/r5-3-6.png",
   },
 
   // ===== 4群：材料・化学・バイオ =====

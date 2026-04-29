@@ -10,6 +10,8 @@ export interface Question {
   answer: number;
   explanation: string;
   image?: string;
+  choiceImage?: string;
+  explanationImage?: string;
   tags?: string[];
   source?: string;
 }

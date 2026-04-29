@@ -1,4 +1,4 @@
-import type { Question } from "@/types";
+﻿import type { Question } from "@/types";
 
 export const r04Questions: Question[] = [
   // 1群 設計・計画
@@ -60,6 +60,7 @@ export const r04Questions: Question[] = [
     answer: 3,
     explanation:
       "合力の平均値はFa－Fb＝300－200＝100（N）。合力が200N以上になるには、平均から100Nの誤差が必要。\n分散の加法性より σ²＝σa²＋σb²＝30²＋40²＝900＋1600＝2500、よってσ＝50。\n50z≧100 → z≧2.0。\n表よりz=2.0の上側確率は2.28%なので、1%以上5%未満に該当する③が正解。",
+    image: "/images/r4-1-3.png",
   },
   {
     id: "R04-I-1-4",
@@ -108,6 +109,7 @@ export const r04Questions: Question[] = [
     answer: 2,
     explanation:
       "各計画案の期待価値を計算（×10倍で「千万円」として計算）：\nア：5×7+4×2+4×1－3×10＝35+8+4－30＝17\nイ：5×7+4×2+7×1－3×10＝35+8+7－30＝20\nウ：3×7+6×2+7×1－3×10＝21+12+7－30＝10\nエ：6×7+5×2+3×1－4×10＝42+10+3－40＝15\nオ：7×7+4×2+5×1－6×10＝49+8+5－60＝2\n期待価値が最大のイ（20千万円＝2億円）が正解。",
+    image: "/images/r4-1-6.png",
   },
 
   // 2群 情報・論理
@@ -184,6 +186,7 @@ export const r04Questions: Question[] = [
     answer: 5,
     explanation:
       "（ア）「1110101」と「1001111」を比較：\n位置2（1vs0）、3（1vs0）、4（0vs1）が異なる→ハミング距離は4。\n（イ）受信ビット列「1000010」→X1=1,X2=0,X3=0,X4=0,X5=0,X6=1,X7=0としてパリティ検査：\nX5のはず=X2+X3+X4=0+0+0=0（X5=0と一致）\nX6のはず=X1+X3+X4=1+0+0=1（X6=1と一致）\nX7のはず=X1+X2+X4=1+0+0=1（X7=0と不一致）\nX7のみ誤りなのでX7を反転→送信ビット列は「1000011」。",
+    image: "/images/r4-2-4.png",
   },
   {
     id: "R04-I-2-5",
@@ -204,6 +207,7 @@ export const r04Questions: Question[] = [
     answer: 5,
     explanation:
       "2進数(11001011)₂：a7=1,a6=1,a5=0,a4=0,a3=1,a2=0,a1=1,a0=1。\ns=1（a7=1）→3（2×1+1）→6（2×3+0）\n→2×6+0=12（a4=0）← ア=12\n→2×12+1=25（a3=1）← イ=25\n→2×25+0=50（a2=0）← ウ=50\n→2×50+1=101（a1=1）← エ=101\n→2×101+1=203（a0=1）\n答え：（ア）12、（イ）25、（ウ）50、（エ）101 → ⑤",
+    image: "/images/r4-2-5.png",
   },
   {
     id: "R04-I-2-6",
@@ -240,6 +244,7 @@ export const r04Questions: Question[] = [
     answer: 4,
     explanation:
       "④は誤り。(fi+1－2fi+fi-1)/Δ²は2階差分（d²f/dx²の差分表現）であり、1階導関数df/dxの差分表現ではない。\n①(fi+1－fi)/Δ：前進差分（正しい）。\n⑤(fi－fi-1)/Δ：後退差分（正しい）。\n③(fi+1－fi-1)/2Δ：中心差分（正しい）。\n②(3fi－4fi-1+fi-2)/2Δ：2次精度後退差分（正しい）。",
+    image: "/images/r4-3-1.png",
   },
   {
     id: "R04-I-3-2",
@@ -293,6 +298,7 @@ export const r04Questions: Question[] = [
     answer: 2,
     explanation:
       "構造の釣り合いから分力を計算する。\n水平方向の釣り合い：N1・sinθ1＝N2・sinθ2\n鉛直方向の釣り合い：N1・cosθ1＋N2・cosθ2＝P\n問題の構造（ACが水平から60°、BCが水平から30°）より：\nN1＝P×(水平分力比) ∝ P/2\nN2＝P×(水平分力比) ∝ P√3/2\nN1/N2＝(P/2)/(P√3/2)＝1/√3",
+    image: "/images/r4-3-4.png",
   },
   {
     id: "R04-I-3-5",
@@ -333,6 +339,7 @@ export const r04Questions: Question[] = [
     answer: 5,
     explanation:
       "小角度近似でsinθ≈x/L。運動方程式 m・d²x/dt²＝－2Tx/L より角振動数ω＝√(2T/mL)、固有振動数f∝√(1/mL)。\n系（a）：fa∝√(1/mL)\n系（b）：fb∝√(1/(2m・2L))＝√(1/4mL)＝(1/2)√(1/mL)\nよってfa：fb＝1：1/2＝2：1。\n直感的にも、系（b）は系（a）より糸が長く質量も大きいため振動周期が長い（fa>fb）ことがわかるので、④または⑤に絞れる。",
+    image: "/images/r4-3-6.png",
   },
 
   // 4群 材料・化学・バイオ

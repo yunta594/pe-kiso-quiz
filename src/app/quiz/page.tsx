@@ -9,9 +9,10 @@ import QuestionCard from "@/components/QuestionCard";
 import ExplanationPanel from "@/components/ExplanationPanel";
 import ResultScreen from "@/components/ResultScreen";
 import QuizSetup from "@/components/QuizSetup";
+import ExamSelectScreen from "@/components/ExamSelectScreen";
 import Link from "next/link";
 
-type Phase = "setup" | "quiz" | "result";
+type Phase = "setup" | "exam-select" | "quiz" | "result";
 
 function QuizContent() {
   const params = useSearchParams();
@@ -22,6 +23,7 @@ function QuizContent() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>([]);
+  const [isExamMode, setIsExamMode] = useState(false);
 
   const filterLabel =
     mode === "year"
@@ -39,11 +41,34 @@ function QuizContent() {
     setQuestions(qs);
     setAnswers(new Array(qs.length).fill(null));
     setCurrentIdx(0);
+    setIsExamMode(false);
+    setPhase("quiz");
+  }
+
+  function handleStartExamSelect() {
+    setPhase("exam-select");
+  }
+
+  function handleExamStart(selectedQs: Question[]) {
+    setQuestions(selectedQs);
+    setAnswers(new Array(selectedQs.length).fill(null));
+    setCurrentIdx(0);
+    setIsExamMode(true);
     setPhase("quiz");
   }
 
   function handleRetry() {
+    setIsExamMode(false);
     setPhase("setup");
+  }
+
+  function handleReview() {
+    const wrongQs = questions.filter((_, i) => answers[i] !== questions[i].answer);
+    if (wrongQs.length === 0) return;
+    setQuestions(wrongQs);
+    setAnswers(new Array(wrongQs.length).fill(null));
+    setCurrentIdx(0);
+    setPhase("quiz");
   }
 
   // ── Setup phase ──────────────────────────────────────────────────────────
@@ -66,6 +91,29 @@ function QuizContent() {
             filter={filter}
             filterLabel={filterLabel}
             onStart={handleStart}
+            onStartExam={mode === "mock" ? handleStartExamSelect : undefined}
+          />
+        </div>
+      </div>
+    );
+  }
+
+  // ── Exam select phase ────────────────────────────────────────────────────
+  if (phase === "exam-select") {
+    return (
+      <div className="min-h-screen bg-slate-100">
+        <header className="bg-[#1e3a5f] text-white px-4 py-4 flex items-center gap-3 shadow-md">
+          <Link href="/" className="text-white/60 hover:text-white text-sm transition-colors">
+            ← トップ
+          </Link>
+          <span className="text-white/40">|</span>
+          <h1 className="font-bold text-base">本試験シミュレーション</h1>
+        </header>
+        <div className="max-w-2xl mx-auto px-4 py-8">
+          <ExamSelectScreen
+            filter={filter}
+            onStart={handleExamStart}
+            onBack={() => setPhase("setup")}
           />
         </div>
       </div>
@@ -91,8 +139,9 @@ function QuizContent() {
             questions={questions}
             answers={answers}
             filterLabel={filterLabel}
-            mode={mode}
             onRetry={handleRetry}
+            onReview={handleReview}
+            isExam={isExamMode}
           />
         </div>
       </div>

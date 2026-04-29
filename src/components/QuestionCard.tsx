@@ -48,12 +48,24 @@ export default function QuestionCard({
         <p className="text-[17px] leading-relaxed text-slate-800 whitespace-pre-wrap">
           {question.question}
         </p>
-        {/* 図 */}
+        {/* 問題図 */}
         {question.image && (
           <div className="mt-4 flex justify-center">
             <Image
               src={question.image}
               alt={`問題図 ${question.id}`}
+              width={480}
+              height={320}
+              className="max-w-full rounded-lg border border-slate-200"
+            />
+          </div>
+        )}
+        {/* 選択肢の数式図 */}
+        {question.choiceImage && (
+          <div className="mt-4 flex justify-center">
+            <Image
+              src={question.choiceImage}
+              alt={`選択肢図 ${question.id}`}
               width={480}
               height={320}
               className="max-w-full rounded-lg border border-slate-200"

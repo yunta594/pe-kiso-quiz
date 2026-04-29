@@ -1,4 +1,4 @@
-import type { Question } from "@/types";
+﻿import type { Question } from "@/types";
 
 
 export const mockP3Questions: Question[] = [
@@ -93,6 +93,7 @@ export const mockP3Questions: Question[] = [
       "経路A→D→E：5＋6＋3 ＝ 14日\n" +
       "経路B→D→E：3＋6＋3 ＝ 12日\n" +
       "最長経路（クリティカルパス）はA→D→E＝14日。",
+    image: "/images/ab3-1-4.png",
   },
   {
     id: "MP3-I-1-5",
@@ -184,6 +185,7 @@ export const mockP3Questions: Question[] = [
       "④ A・B̄ ＋ Ā・B：「AかつNotB」または「NotAかつB」→ XORと等価な式。\n\n" +
       "よって②と④は等価であり、どちらも真理値表と一致する → 答え⑤。\n" +
       "①A+B：A＝B＝1のとき結果1（表では0）。③A・B：A＝0、B＝1のとき0（表では1）。",
+    image: "/images/ab3-2-2.png",
   },
   {
     id: "MP3-I-2-3",
@@ -238,6 +240,7 @@ export const mockP3Questions: Question[] = [
       "A(2,n)＝2n＋3\n\n" +
       "A(3,0)＝A(2,1)＝2×1＋3＝5\n" +
       "A(3,1)＝A(2,A(3,0))＝A(2,5)＝2×5＋3＝13",
+    image: "/images/ab3-2-4.png",
   },
   {
     id: "MP3-I-2-5",
@@ -312,6 +315,7 @@ export const mockP3Questions: Question[] = [
       "固有振動数 ωn ∝ √(K/m) に比例するため、\n" +
       "Ka ＝ Kb ＝ 2k　→　aとbの固有振動数は等しい（①正解）\n" +
       "Kc ＝ k/2　→　cの固有振動数が最も小さい",
+    image: "/images/ab3-3-1.png",
   },
   {
     id: "MP3-I-3-2",
@@ -361,6 +365,8 @@ export const mockP3Questions: Question[] = [
       "・単純支持梁・中央集中荷重：δ ＝ PL³/(48EI)　←本問\n" +
       "・単純支持梁・等分布荷重　：δ ＝ 5wL⁴/(384EI)\n\n" +
       "支持条件と荷重条件の組合せで分母の係数が決まる。",
+    image: "/images/ab3-3-3.png",
+    explanationImage: "/images/ab3-3-3.kaisetu.png",
   },
   {
     id: "MP3-I-3-4",

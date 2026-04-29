@@ -1,4 +1,4 @@
-import type { Question } from "@/types";
+﻿import type { Question } from "@/types";
 
 export const r01rQuestions: Question[] = [
   // 1群 設計・計画
@@ -57,6 +57,7 @@ export const r01rQuestions: Question[] = [
     answer: 1,
     explanation:
       "各事象の確率を順に計算する（AND=積、OR=1-(1-A)(1-B)）：\n(1) OR: 1-(1-0.1)×(1-0.1)=1-0.81=0.19\n(2) AND: 0.2×0.2=0.04\n(4) OR: 1-(1-0.19)×(1-0.04)=1-0.81×0.96=1-0.7776=0.2224\n(A) AND: 0.2224×0.4×0.4=0.2224×0.16≈0.0036\n\nただし問題の構造を再確認すると0.035584≈0.036となり①が正解。",
+    image: "/images/r1_re_1-3.png",
     tags: ["信頼性"],
   },
   {
@@ -157,6 +158,7 @@ export const r01rQuestions: Question[] = [
     answer: 4,
     explanation:
       "ユークリッド互除法より、(3)(4)式から最大公約数(ア)は3。\n次に108×[イ]+57×[ウ]=3を満たすのを確認する：\n④：108×9+57×(-17)=972-969=3 ✓\n⑤：108×(-10)+57×19=-1080+1083=3 ✓\n\n行列計算を正確に行うと(イ)=9、(ウ)=-17となり、④が正解。\n（当てはめ計算でも確認できるが、行列式でx,yを求めることが求められている）",
+    image: "/images/r1_re_2-2.png",
     tags: ["アルゴリズム"],
   },
   {
@@ -314,6 +316,7 @@ export const r01rQuestions: Question[] = [
     answer: 5,
     explanation:
       "シンプソンの1/3公式：(b-a)/6 × {f(a) + 4f((a+b)/2) + f(b)}\na=-1、b=1、f(x)=1/(x+3)\nf(-1)=1/2、f(0)=1/3、f(1)=1/4\n\nS≈(1-(-1))/6 × {1/2 + 4×(1/3) + 1/4}\n=2/6 × {1/2 + 4/3 + 1/4}\n=1/3 × {6/12 + 16/12 + 3/12}\n=1/3 × 25/12\n=25/36≈0.694≈0.693 → ⑤\n\n（真値はln(4/2)=ln2≈0.693）",
+    image: "/images/r1_re_3-4.png",
     tags: ["数値解析"],
   },
   {
@@ -355,6 +358,7 @@ export const r01rQuestions: Question[] = [
     answer: 2,
     explanation:
       "楕円孔の端点Aでの応力集中：\nσy_max = σ(1+2a/b)　（a:x方向の半軸、b:y方向の半軸）\na>bなので(1+2a/b)>3、よってσy>(3σ)。\ny方向のみに遠方応力σが加わっているので水平方向の荷重はなく、σx=0。\n端点Aはx軸上にあるためせん断応力τxy=0。\nよって(σx, σy, τxy)=(0, (1+2a/b)σ, 0)で②が正解。",
+    image: "/images/r1_re_3-6.png",
     tags: ["材料力学・弾性体"],
   },
 

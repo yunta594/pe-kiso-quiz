@@ -1,4 +1,4 @@
-import type { Question } from "@/types";
+﻿import type { Question } from "@/types";
 
 export const r01Questions: Question[] = [
   // ===== 1群：設計・計画 =====
@@ -78,6 +78,7 @@ export const r01Questions: Question[] = [
     answer: 5,
     explanation:
       "細い棒（針金）に圧縮荷重をかけたとき：\n・荷重が小さい（ア）間は、真直ぐな状態が安定を保つ。\n・荷重がある限界値（座屈荷重）を越す（イ）と、真直ぐな状態が不安定になる。\n・曲げ（ウ）形式の変形（横へのたわみ）が始まる。\n・この現象を座屈（エ）という。\nよって⑤が正解。",
+    image: "/images/r1-1-4.png",
     tags: ["材料力学・機械設計"],
   },
   {
@@ -114,6 +115,7 @@ export const r01Questions: Question[] = [
     answer: 3,
     explanation:
       "（ア）x=0の近傍でのテイラー展開の特別な場合→「マクローリン展開」。\n（イ）e^(iπ)＋1＝0 という美しい関係式→「オイラーの等式」。\n（ウ）不定形の極限値を微分を使って計算する→「ロピタルの定理」。\nよって③が正解。",
+    image: "/images/r1-1-6.png",
     tags: ["微分積分・ベクトル解析"],
   },
 
@@ -158,6 +160,7 @@ export const r01Questions: Question[] = [
     answer: 1,
     explanation:
       "元の順序(8,12,5,3,10,7,6)で登録した二分探索木では、8より大きいものが12→10の順、8より小さいものが5→3→7→6の順で登録されている。\n\n同じ木を作るには、この相対順序が保たれていればよい。①は8より大きいものが12→10の順、小さいものが5→3→7→6の順になっており、元と同じ木が得られる。",
+    image: "/images/r1-2-2.png",
     tags: ["アルゴリズム"],
   },
   {
@@ -173,6 +176,7 @@ export const r01Questions: Question[] = [
     answer: 3,
     explanation:
       "距離が0に近い（類似度が高い）には、ベクトルの方向が同じ（比率が同じ）であればよい。\n\n文書Aは(7,3,2)なので、各成分の比は7:3:2。\n文書Dは(21,9,6)で、文書Aの各成分をちょうど3倍したもの。\n単語1:単語2:単語3の比が7:3:2＝21:9:6で等しい。\n\nよって文書Dが最も類似しており③が正解。",
+    image: "/images/r1-2-3.png",
     tags: ["アルゴリズム"],
   },
   {
@@ -209,6 +213,7 @@ export const r01Questions: Question[] = [
     answer: 5,
     explanation:
       "（ア）「1110001」と「0001110」のハミング距離：全7ビットのうち、一致するビットが1つもないので、ハミング距離は7。\n\n（イ）受信ビット「1001010」について、X5＝X2＋X3＋X4(mod 2)を確認：\n受信X2=0,X3=0,X4=1なので計算値は0+0+1=1。しかし受信X5=0と不一致。\n⑤の送信ビット「1011010」ではX2=0,X3=1,X4=1なので0+1+1=0でX5=0と一致する。\nよって⑤が正解。",
+    image: "/images/r1-2-5.png",
     tags: ["基数変換・数値表現"],
   },
   {
@@ -241,6 +246,7 @@ export const r01Questions: Question[] = [
     answer: 5,
     explanation:
       "各偏微分を計算する：\n∂Vx/∂x＝cos(x＋y＋z)\n∂Vy/∂y＝－sin(x＋y＋z)\n∂Vz/∂z＝1\n\n(x,y,z)＝(2π,0,0) を代入：\ncos(2π)＝1、－sin(2π)＝0、1\n\ndiv V＝1＋0＋1＝2。よって⑤が正解。",
+    image: "/images/r1-3-1.png",
     tags: ["微分積分・ベクトル解析"],
   },
   {
@@ -262,6 +268,7 @@ export const r01Questions: Question[] = [
     answer: 5,
     explanation:
       "ヤコビ行列[J]は\n[J]＝[[∂x/∂r, ∂x/∂s], [∂y/∂r, ∂y/∂s]]\n\nその行列式は\n|J|＝∂x/∂r・∂y/∂s－∂x/∂s・∂y/∂r\n\nよって⑤が正解。",
+    choiceImage: "/images/r1-3-2_ans.png",
     tags: ["微分積分・ベクトル解析"],
   },
   {
@@ -307,6 +314,7 @@ export const r01Questions: Question[] = [
     answer: 4,
     explanation:
       "棒に荷重Pが加わったときのひずみはε＝P/(EA)、変位はδ＝Pl/(EA)。\n\nひずみエネルギーは荷重－変位グラフの面積（直角三角形）で表され、\nU＝P×δ/2＝P×Pl/(EA)/2＝P²l/(2EA)\n\nよって④が正解。",
+    image: "/images/r1-3-5.png",
     tags: ["材料力学・弾性体"],
   },
   {
@@ -328,6 +336,7 @@ export const r01Questions: Question[] = [
     answer: 3,
     explanation:
       "I＝Ml²/3を代入すると：\nω＝√(Mgl/2 × 3/(Ml²))＝√(3g/2l)\n\n周期T＝2π/ω＝2π/√(3g/2l)＝2π√(2l/3g)\n\nよって③が正解。",
+    image: "/images/r1-3-6.png",
     tags: ["振動・運動"],
   },
 

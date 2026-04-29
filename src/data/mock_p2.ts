@@ -1,4 +1,4 @@
-import type { Question } from "@/types";
+﻿import type { Question } from "@/types";
 
 
 export const mockP2Questions: Question[] = [
@@ -75,6 +75,7 @@ export const mockP2Questions: Question[] = [
       "P_R = 1−(1−0.3)(1−0.3) = 1−0.49 = 0.51\n\n" +
       "（5）頂上事象A（AND結合）：\n" +
       "P_A = P_LM × P_R = 0.222 × 0.51 ≒ 0.113",
+    image: "/images/ab2-1-3.png",
   },
   {
     id: "MP2-I-1-4",
@@ -145,6 +146,7 @@ export const mockP2Questions: Question[] = [
       "・戦略B：500×0.4 ＋ 300×0.6 ＝ 200 ＋ 180 ＝ 380万円\n" +
       "・戦略C：600×0.4 ＋ 200×0.6 ＝ 240 ＋ 120 ＝ 360万円\n" +
       "AとBがともに最大値380万円で同値となる。",
+    image: "/images/ab2-1-6.png",
   },
 
   // ── 2群：情報・論理 ────────────────────────────────────────────────
@@ -196,6 +198,7 @@ export const mockP2Questions: Question[] = [
       "   ＝ (A＋B)・(Ā＋B̄)\n\n" +
       "これは②と一致する。\n" +
       "なお X ＝ (A・B̄)＋(Ā・B) はXOR（排他的論理和）の等価表現でもある。",
+    choiceImage: "/images/ab2-2-2_ans.png",
   },
   {
     id: "MP2-I-2-3",
@@ -299,6 +302,7 @@ export const mockP2Questions: Question[] = [
       "Aは上三角行列（対角より下がすべて0）。\n" +
       "上三角行列の行列式は対角要素の積で求まる。\n" +
       "det(A) ＝ 1 × 4 × 6 ＝ 24",
+    image: "/images/ab2-3-1.png",
   },
   {
     id: "MP2-I-3-2",
@@ -369,6 +373,7 @@ export const mockP2Questions: Question[] = [
       "フックの法則より：\n" +
       "σ ＝ E・ε ＝ −E・α・ΔT\n\n" +
       "マイナスは圧縮を意味するので、E・α・ΔT の圧縮応力が生じる。",
+    image: "/images/ab2-3-4.png",
   },
   {
     id: "MP2-I-3-5",
@@ -422,6 +427,7 @@ export const mockP2Questions: Question[] = [
       "・単純支持梁・中央集中荷重：δ ＝ PL³/(48EI)\n" +
       "・単純支持梁・等分布荷重　：δ ＝ 5wL⁴/(384EI)\n\n" +
       "①PL²/(2EI) は同じ片持梁の自由端たわみ角（θ）の公式なので混同に注意。",
+    image: "/images/ab2-3-6.png",
   },
 
   // ── 4群：材料・化学・バイオ ────────────────────────────────────────

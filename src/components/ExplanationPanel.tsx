@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import type { Question } from "@/types";
 
 interface Props {
@@ -100,6 +101,19 @@ export default function ExplanationPanel({
         <p className="text-[15px] leading-relaxed text-slate-700 whitespace-pre-wrap">
           {question.explanation}
         </p>
+
+        {/* 解説図 */}
+        {question.explanationImage && (
+          <div className="mt-4 flex justify-center">
+            <Image
+              src={question.explanationImage}
+              alt={`解説図 ${question.id}`}
+              width={480}
+              height={320}
+              className="max-w-full rounded-lg border border-slate-200"
+            />
+          </div>
+        )}
 
         {/* AI解説ボタン */}
         {!aiExplanation && (

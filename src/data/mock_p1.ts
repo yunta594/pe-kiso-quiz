@@ -1,4 +1,4 @@
-import type { Question } from "@/types";
+﻿import type { Question } from "@/types";
 
 
 export const mockP1Questions: Question[] = [
@@ -77,6 +77,7 @@ export const mockP1Questions: Question[] = [
       "正常 1 個：P(1) ＝ C(4,1)×0.8¹×0.2³ ＝ 4×0.8×0.008 ＝ 0.0256\n\n" +
       "系の故障確率 ＝ 0.0016 ＋ 0.0256 ＝ 0.0272\n" +
       "系の信頼度 ＝ 1 − 0.0272 ＝ 0.9728 → ①の範囲（0.95 以上）",
+    image: "/images/ab1-1-3.png",
   },
   {
     id: "MP1-I-1-4",
@@ -146,6 +147,7 @@ export const mockP1Questions: Question[] = [
       "案B：0.3×0.4 ＋ 0.5×0.4 ＋ 0.4×0.2 ＝ 0.12＋0.20＋0.08 ＝ 0.40（最大）\n" +
       "案C：0.2×0.4 ＋ 0.3×0.4 ＋ 0.3×0.2 ＝ 0.08＋0.12＋0.06 ＝ 0.26\n\n" +
       "案Bが最も大きい。",
+    image: "/images/ab1-1-6.png",
   },
 
   // ── 2群：情報・論理 ────────────────────────────────────────────────
@@ -328,6 +330,7 @@ export const mockP1Questions: Question[] = [
       "λ² − 7λ ＋ 10 ＝ 0\n" +
       "(λ − 2)(λ − 5) ＝ 0\n\n" +
       "λ ＝ 2, 5",
+    image: "/images/ab1-3-2.png",
   },
   {
     id: "MP1-I-3-3",
@@ -368,6 +371,7 @@ export const mockP1Questions: Question[] = [
       "フックの法則 σ ＝ Eε より\n" +
       "ひずみ ε ＝ σ/E ＝ 2.0×10⁷ / 2.0×10¹¹ ＝ 1.0×10⁻⁴\n\n" +
       "伸び ΔL ＝ ε×L ＝ 1.0×10⁻⁴ × 3.0 ＝ 3.0×10⁻⁴ m ＝ 0.30 mm",
+    image: "/images/ab1-3-4.png",
   },
   {
     id: "MP1-I-3-5",
@@ -401,6 +405,7 @@ export const mockP1Questions: Question[] = [
       "並列抵抗の合成：1/R ＝ 1/R₁ ＋ 1/R₂ ＋ 1/R₃\n\n" +
       "1/R ＝ 1/2 ＋ 1/2 ＋ 1/2 ＝ 3/2\n\n" +
       "R ＝ 2/3 Ω",
+    image: "/images/ab1-3-6.png",
   },
 
   // ── 4群：材料・化学・バイオ ────────────────────────────────────────
