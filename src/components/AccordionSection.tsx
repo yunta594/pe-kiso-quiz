@@ -15,18 +15,14 @@ export default function AccordionSection({ title, children, defaultOpen = false 
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between py-2 text-left group"
+        className="w-full bg-white hover:bg-blue-50 border-2 border-slate-200 hover:border-blue-400
+          rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md text-left group"
       >
-        <p className="font-bold text-slate-500 text-sm flex items-center gap-1.5">
-          <span className="w-1 h-3.5 bg-blue-400 rounded inline-block" />
+        <p className="font-bold text-[17px] text-slate-800 group-hover:text-blue-700 transition-colors">
           {title}
         </p>
-        <span
-          className={`text-slate-400 text-lg transition-transform duration-200 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        >
-          ▾
+        <span className="text-slate-400 text-xl leading-none transition-all duration-200">
+          {isOpen ? "▲" : "▼"}
         </span>
       </button>
       {isOpen && <div className="mt-2">{children}</div>}
