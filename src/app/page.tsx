@@ -17,8 +17,8 @@ export default function Home() {
       {/* ヘッダー */}
       <header className="bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] text-white shadow-lg">
         <div className="max-w-3xl mx-auto px-4 py-6">
-          <p className="text-blue-200 text-sm font-medium mb-1">技術士一次試験</p>
-          <h1 className="text-2xl font-bold leading-tight">基礎科目 練習問題</h1>
+          <h1 className="text-2xl font-bold leading-tight mb-0.5">技術士一次試験</h1>
+          <p className="text-blue-200 text-lg font-medium">基礎科目 練習問題</p>
           <p className="text-blue-300 text-sm mt-1">
             過去問解説付き・全{Object.values(questionsByYear).flat().length}問
           </p>
