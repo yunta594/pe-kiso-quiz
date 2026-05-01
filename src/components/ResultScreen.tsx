@@ -9,7 +9,6 @@ interface Props {
   filterLabel: string;
   onRetry: () => void;
   onReview?: () => void;
-  isExam?: boolean;
 }
 
 const NUMS = ["①", "②", "③", "④", "⑤"];
@@ -20,15 +19,13 @@ export default function ResultScreen({
   filterLabel,
   onRetry,
   onReview,
-  isExam,
 }: Props) {
   const correctCount = answers.filter(
     (a, i) => a === questions[i].answer
   ).length;
   const total = questions.length;
   const pct = Math.round((correctCount / total) * 100);
-  const passThreshold = isExam ? 50 : 60;
-  const isPass = pct >= passThreshold;
+  const isPass = pct >= 50;
 
   const wrongIndices = answers
     .map((a, i) => ({ i, correct: a === questions[i].answer }))
@@ -39,7 +36,7 @@ export default function ResultScreen({
     <div className="space-y-6">
       {/* スコアカード */}
       <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        <div className="bg-[#1e3a5f] px-6 py-5 text-center">
+        <div className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] px-6 py-5 text-center">
           <p className="text-white/70 text-sm mb-1">{filterLabel}</p>
           <p className="text-white font-bold text-xl">演習結果</p>
         </div>
@@ -56,11 +53,6 @@ export default function ResultScreen({
             <p className="text-2xl text-slate-700 font-semibold">
               {correctCount} / {total} 問 正解
             </p>
-            {isExam && (
-              <p className="text-xs text-slate-400 mt-1">
-                合格ライン：{passThreshold}%（{Math.ceil(total * passThreshold / 100)}問以上）
-              </p>
-            )}
             <p
               className={`mt-3 text-base font-bold px-4 py-1.5 rounded-full ${
                 isPass
@@ -68,10 +60,8 @@ export default function ResultScreen({
                   : "bg-red-100 text-red-700"
               }`}
             >
-              {isExam
-                ? (isPass ? "合格！" : "不合格...")
-                : pct >= 80
-                ? "優秀！"
+              {pct >= 80
+                ? "高得点！"
                 : isPass
                 ? "合格ライン到達"
                 : "もう少し頑張りましょう"}
@@ -88,12 +78,6 @@ export default function ResultScreen({
                 style={{ width: `${pct}%` }}
               />
             </div>
-            {isExam && (
-              <div
-                className="absolute top-0 h-4 w-0.5 bg-slate-500 opacity-50"
-                style={{ left: `${passThreshold}%` }}
-              />
-            )}
           </div>
         </div>
       </div>
@@ -151,7 +135,7 @@ export default function ResultScreen({
         <div className="flex gap-3 flex-col sm:flex-row">
           <button
             onClick={onRetry}
-            className="flex-1 bg-[#1e3a5f] hover:bg-[#162d4a] text-white font-bold py-4 rounded-xl text-base transition-colors"
+            className="flex-1 bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] hover:from-[#162d4a] hover:to-[#1a4f96] text-white font-bold py-4 rounded-xl text-base transition-all"
           >
             設定を変えてやり直す
           </button>

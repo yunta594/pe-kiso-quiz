@@ -10,26 +10,26 @@
 
 body {
   font-family: "Noto Sans JP", sans-serif;
-  background-color: #f0f4fa;
+  background-color: #f8fafc;
   color: #0f172a;
 }
 
 .choice-btn {
-  @apply w-full text-left px-5 py-4 rounded-xl border-2 border-slate-200
-    bg-white text-base leading-relaxed transition-all duration-150
+  @apply w-full text-left px-5 py-5 rounded-xl border-2 border-slate-300
+    bg-white text-[17px] text-slate-800 leading-relaxed transition-all duration-150
     hover:border-blue-400 hover:bg-blue-50 focus:outline-none focus:border-blue-500;
 }
 
 .choice-btn.selected-correct {
-  @apply border-green-500 bg-green-50 text-green-800;
+  @apply border-green-600 bg-green-50 text-green-900;
 }
 
 .choice-btn.selected-wrong {
-  @apply border-red-500 bg-red-50 text-red-800;
+  @apply border-red-600 bg-red-50 text-red-900;
 }
 
 .choice-btn.show-correct {
-  @apply border-green-400 bg-green-50 text-green-800;
+  @apply border-green-600 bg-green-100 text-green-900;
 }
 
 .choice-btn:disabled {

@@ -73,9 +73,9 @@ export const YEAR_LABELS: Record<string, string> = {
 };
 
 export const MOCK_LABELS: Record<string, string> = {
-  MP1: "実力テスト ver.1",
-  MP2: "実力テスト ver.2",
-  MP3: "実力テスト ver.3",
+  MP1: "練習問題 ver.1",
+  MP2: "練習問題 ver.2",
+  MP3: "練習問題 ver.3",
 };
 
 export const TOPIC_LABELS: Record<string, string> = {

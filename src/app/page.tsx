@@ -10,9 +10,9 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-50">
       {/* ヘッダー */}
-      <header className="bg-[#1e3a5f] text-white shadow-lg">
+      <header className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] text-white shadow-lg">
         <div className="max-w-2xl mx-auto px-4 py-6">
           <p className="text-blue-200 text-sm font-medium mb-1">技術士一次試験</p>
           <h1 className="text-2xl font-bold leading-tight">基礎科目 練習問題</h1>
@@ -37,7 +37,7 @@ export default function Home() {
                   key={year}
                   href={`/quiz?mode=year&filter=${year}`}
                   className="bg-white hover:bg-blue-50 border-2 border-slate-200 hover:border-blue-400
-                    rounded-xl px-5 py-4 flex items-center justify-between transition-all group"
+                    rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md hover:-translate-y-0.5 group"
                 >
                   <div>
                     <p className="font-bold text-[17px] text-slate-800 group-hover:text-blue-700 transition-colors">
@@ -68,7 +68,7 @@ export default function Home() {
                   key={num}
                   href={`/quiz?mode=group&filter=${num}`}
                   className="bg-white hover:bg-blue-50 border-2 border-slate-200 hover:border-blue-400
-                    rounded-xl px-5 py-4 flex items-center justify-between transition-all group"
+                    rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md hover:-translate-y-0.5 group"
                 >
                   <div>
                     <p className="font-bold text-[17px] text-slate-800 group-hover:text-blue-700 transition-colors">
@@ -94,7 +94,7 @@ export default function Home() {
           <Link
             href="/topics"
             className="bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-400
-              rounded-xl px-5 py-4 flex items-center justify-between transition-all group"
+              rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md hover:-translate-y-0.5 group"
           >
             <div>
               <p className="font-bold text-[17px] text-slate-800 group-hover:text-amber-700 transition-colors">
@@ -124,7 +124,7 @@ export default function Home() {
                   key={key}
                   href={`/quiz?mode=mock&filter=${key}`}
                   className="bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-400
-                    rounded-xl px-5 py-4 flex items-center justify-between transition-all group"
+                    rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md hover:-translate-y-0.5 group"
                 >
                   <div>
                     <div className="flex items-center gap-2 mb-0.5">
@@ -147,8 +147,8 @@ export default function Home() {
         <section>
           <Link
             href="/quiz?mode=random&filter=all"
-            className="block bg-[#1e3a5f] hover:bg-[#162d4a] text-white rounded-xl px-5 py-5
-              text-center transition-colors shadow-md"
+            className="block bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] hover:from-[#162d4a] hover:to-[#1a4f96] text-white rounded-xl px-5 py-5
+              text-center transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
             <p className="font-bold text-xl">ランダム演習</p>
             <p className="text-blue-200 text-sm mt-1">

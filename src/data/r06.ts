@@ -1,4 +1,4 @@
-import type { Question } from "@/types";
+﻿import type { Question } from "@/types";
 
 export const r06Questions: Question[] = [
   // ===== 1群：設計・計画 =====
@@ -21,6 +21,7 @@ export const r06Questions: Question[] = [
     answer: 1,
     explanation:
       "ユニバーサルデザインはロナルド・メイスが1990年に提唱した概念で7つの原則がある。\n[1]公平な利用　[2]利用における柔軟性　[3]単純で直感的な利用　[4]認知できる情報　[5]失敗に対する寛大さ　[6]少ない身体的な努力　[7]接近や利用のためのサイズと空間\n\n（ア）柔軟性、（イ）単純、（ウ）寛大、（エ）身体的の語句が入る。よって正解は①。",
+    tags: ["ユニバーサルデザイン"],
   },
   {
     id: "R06-I-1-2",

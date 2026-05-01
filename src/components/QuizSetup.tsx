@@ -15,13 +15,12 @@ interface Props {
   filter: string;
   filterLabel: string;
   onStart: (groups: number[], count: number) => void;
-  onStartExam?: () => void;
 }
 
 const COUNT_OPTIONS = [6, 10, 15, 30] as const;
 const ALL_GROUPS = [1, 2, 3, 4, 5];
 
-export default function QuizSetup({ mode, filter, filterLabel, onStart, onStartExam }: Props) {
+export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props) {
   const isGroupMode = mode === "group";
   const isTopicMode = mode === "topic";
   const showGroupSelect = !isGroupMode && !isTopicMode;
@@ -62,11 +61,12 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart, onStartE
 
   const available = getAvailable();
   const canStart = (showGroupSelect ? selectedGroups.length > 0 : true) && available > 0;
+  const startCount = isTopicMode ? available : count;
 
   return (
     <div className="space-y-5">
       <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-        <div className="bg-[#1e3a5f] px-6 py-4">
+        <div className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] px-6 py-4">
           <p className="text-blue-200 text-sm mb-0.5">演習設定</p>
           <h2 className="text-white font-bold text-xl">{filterLabel}</h2>
         </div>
@@ -145,68 +145,62 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart, onStartE
                   {filter}（過去問＋練習問題）
                 </span>
               </div>
+              <p className="text-slate-500 text-sm mt-2">
+                このテーマの全 {available} 問を出題します
+              </p>
             </div>
           )}
 
-          {/* 問題数選択 */}
-          <div>
-            <p className="font-bold text-slate-700 text-base mb-3 flex items-center gap-2">
-              <span className="w-1 h-4 bg-blue-600 rounded inline-block" />
-              出題数を選ぶ
-              <span className="text-sm text-slate-400 font-normal">
-                （最大 {available} 問）
-              </span>
-            </p>
-            <div className="grid grid-cols-4 gap-2">
-              {COUNT_OPTIONS.map((n) => {
-                const disabled = n > available;
-                return (
-                  <button
-                    key={n}
-                    onClick={() => !disabled && setCount(n)}
-                    disabled={disabled}
-                    className={`py-3 rounded-xl border-2 font-bold text-lg transition-all
-                      ${
-                        count === n && !disabled
-                          ? "border-blue-600 bg-blue-600 text-white"
-                          : disabled
-                          ? "border-slate-200 bg-slate-100 text-slate-300 cursor-not-allowed"
-                          : "border-slate-200 bg-white text-slate-700 hover:border-blue-400"
-                      }`}
-                  >
-                    {n}問
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* 本試験 Ver.（実力テストモードのみ） */}
-          {mode === "mock" && onStartExam && (
-            <div className="pt-2 border-t border-slate-100">
-              <p className="text-xs text-slate-400 mb-2">本番形式で練習する</p>
-              <button
-                onClick={onStartExam}
-                className="w-full py-3.5 rounded-xl font-bold text-base bg-amber-500 hover:bg-amber-600 text-white transition-colors shadow-sm"
-              >
-                本試験 Ver. → 各群から3問を選択（全15問）
-              </button>
+          {/* 問題数選択（テーマ別以外） */}
+          {!isTopicMode && (
+            <div>
+              <p className="font-bold text-slate-700 text-base mb-3 flex items-center gap-2">
+                <span className="w-1 h-4 bg-blue-600 rounded inline-block" />
+                出題数を選ぶ
+                <span className="text-sm text-slate-400 font-normal">
+                  （最大 {available} 問）
+                </span>
+              </p>
+              <div className="grid grid-cols-4 gap-2">
+                {COUNT_OPTIONS.map((n) => {
+                  const disabled = n > available;
+                  return (
+                    <button
+                      key={n}
+                      onClick={() => !disabled && setCount(n)}
+                      disabled={disabled}
+                      className={`py-3 rounded-xl border-2 font-bold text-lg transition-all
+                        ${
+                          count === n && !disabled
+                            ? "border-blue-600 bg-blue-600 text-white"
+                            : disabled
+                            ? "border-slate-200 bg-slate-100 text-slate-300 cursor-not-allowed"
+                            : "border-slate-200 bg-white text-slate-700 hover:border-blue-400"
+                        }`}
+                    >
+                      {n}問
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           )}
         </div>
       </div>
 
       <button
-        onClick={() => canStart && onStart(selectedGroups, count)}
+        onClick={() => canStart && onStart(selectedGroups, startCount)}
         disabled={!canStart}
         className={`w-full py-4 rounded-xl font-bold text-lg transition-colors shadow-md
           ${
             canStart
-              ? "bg-[#1e3a5f] hover:bg-[#162d4a] text-white"
+              ? "bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] hover:from-[#162d4a] hover:to-[#1a4f96] text-white"
               : "bg-slate-200 text-slate-400 cursor-not-allowed"
           }`}
       >
-        {canStart ? `${count}問スタート →` : "群を1つ以上選択してください"}
+        {canStart
+          ? `${startCount}問スタート →`
+          : "群を1つ以上選択してください"}
       </button>
     </div>
   );
