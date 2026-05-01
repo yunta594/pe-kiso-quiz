@@ -19,14 +19,14 @@ export default function AccordionSection({
 
   const btnClass =
     variant === "orange"
-      ? "bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 border-transparent text-white shadow-sm"
+      ? "bg-gradient-to-r from-[#7c2d12] to-[#c2410c] hover:from-[#6b2610] hover:to-[#b03a0b] border-transparent text-white shadow-sm"
       : "bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] hover:from-[#162d4a] hover:to-[#1a4f96] border-transparent text-white shadow-sm";
 
   return (
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full border-2 rounded-xl px-5 py-4
+        className={`w-full border-2 rounded-xl pl-7 pr-5 py-4
           flex items-center justify-between transition-all hover:shadow-md text-left group ${btnClass}`}
       >
         <p className="font-bold text-[17px] text-white">

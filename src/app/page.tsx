@@ -118,8 +118,8 @@ export default function Home() {
 
         {/* ===== オリジナル問題による演習 ===== */}
         <section>
-          <h2 className="text-xl font-bold text-orange-700 mb-4 pb-3 border-b-2 border-orange-200 flex items-center gap-2">
-            <span className="w-1.5 h-6 bg-orange-500 rounded inline-block" />
+          <h2 className="text-xl font-bold text-[#7c2d12] mb-4 pb-3 border-b-2 border-orange-200 flex items-center gap-2">
+            <span className="w-1.5 h-6 bg-[#c2410c] rounded inline-block" />
             オリジナル問題による演習
           </h2>
           <AccordionSection title="練習問題を解く" variant="orange">

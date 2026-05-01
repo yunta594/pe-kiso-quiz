@@ -15,7 +15,7 @@ export default function RandomQuizAccordion() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] hover:from-[#162d4a] hover:to-[#1a4f96]
-          border-2 border-transparent rounded-xl px-5 py-4 flex items-center justify-between transition-all shadow-sm text-left"
+          border-2 border-transparent rounded-xl pl-7 pr-5 py-4 flex items-center justify-between transition-all shadow-sm text-left"
       >
         <p className="font-bold text-[17px] text-white">
           ランダム演習
