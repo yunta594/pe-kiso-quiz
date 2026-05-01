@@ -17,25 +17,23 @@ export default function AccordionSection({
 }: Props) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
-  const colors =
-    variant === "emerald"
-      ? "hover:bg-emerald-50 hover:border-emerald-400 group-hover:text-emerald-700"
-      : variant === "orange"
-      ? "hover:bg-orange-50 hover:border-orange-400 group-hover:text-orange-700"
-      : "hover:bg-blue-50 hover:border-blue-400 group-hover:text-blue-700";
+  const btnClass =
+    variant === "orange"
+      ? "bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 border-transparent text-white shadow-sm"
+      : "bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] hover:from-[#162d4a] hover:to-[#1a4f96] border-transparent text-white shadow-sm";
 
   return (
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full bg-white border-2 border-slate-200 rounded-xl px-5 py-4
-          flex items-center justify-between transition-all hover:shadow-md text-left group ${colors}`}
+        className={`w-full border-2 rounded-xl px-5 py-4
+          flex items-center justify-between transition-all hover:shadow-md text-left group ${btnClass}`}
       >
-        <p className="font-bold text-[17px] text-slate-800 group-hover:transition-colors">
+        <p className="font-bold text-[17px] text-white">
           {title}
         </p>
         <span
-          className={`text-slate-400 text-2xl leading-none transition-transform duration-200 inline-block ${
+          className={`text-white/70 text-2xl leading-none transition-transform duration-200 inline-block ${
             isOpen ? "rotate-90" : ""
           }`}
         >

@@ -14,14 +14,14 @@ export default function RandomQuizAccordion() {
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-white hover:bg-blue-50 border-2 border-slate-200 hover:border-blue-400
-          rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md text-left group"
+        className="w-full bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] hover:from-[#162d4a] hover:to-[#1a4f96]
+          border-2 border-transparent rounded-xl px-5 py-4 flex items-center justify-between transition-all shadow-sm text-left"
       >
-        <p className="font-bold text-[17px] text-slate-800 group-hover:text-blue-700 transition-colors">
+        <p className="font-bold text-[17px] text-white">
           ランダム演習
         </p>
         <span
-          className={`text-slate-400 text-2xl leading-none transition-transform duration-200 inline-block ${
+          className={`text-white/70 text-2xl leading-none transition-transform duration-200 inline-block ${
             isOpen ? "rotate-90" : ""
           }`}
         >
