@@ -98,7 +98,7 @@ export default function ExplanationPanel({
           <span className="w-1 h-4 bg-blue-600 rounded inline-block" />
           解説
         </h3>
-        <p className="text-[15px] leading-relaxed text-slate-700 whitespace-pre-wrap">
+        <p className="text-[17px] leading-relaxed text-slate-700 whitespace-pre-wrap">
           {question.explanation}
         </p>
 
@@ -168,7 +168,7 @@ export default function ExplanationPanel({
               <span>✨</span>
               生成AIによる解説
             </p>
-            <p className="text-[15px] leading-relaxed text-slate-700 whitespace-pre-wrap">
+            <p className="text-[17px] leading-relaxed text-slate-700 whitespace-pre-wrap">
               {aiExplanation}
             </p>
           </div>

@@ -33,12 +33,12 @@ export default function QuestionCard({
       {/* 問題ヘッダー */}
       <div className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] px-6 py-4 flex items-start justify-between gap-4">
         <div className="flex-1">
-          <span className="inline-block bg-white/20 text-white text-xs font-medium px-2.5 py-1 rounded-full mb-2">
+          <span className="inline-block bg-white/20 text-white text-sm font-medium px-2.5 py-1 rounded-full mb-2">
             {question.yearLabel}　{question.groupLabel}
           </span>
         </div>
         {/* 年度・問題番号バッジ（右下目立たない位置） */}
-        <span className="text-white/70 text-sm shrink-0 mt-1">
+        <span className="text-white/70 text-base shrink-0 mt-1">
           I-{question.group}-{question.number}
         </span>
       </div>
