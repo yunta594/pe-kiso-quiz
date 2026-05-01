@@ -70,7 +70,7 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props)
   return (
     <div className="space-y-5">
       <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-        <div className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] px-6 py-4">
+        <div className="bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] px-6 py-4">
           <p className="text-blue-200 text-sm mb-0.5">演習設定</p>
           <h2 className="text-white font-bold text-xl">{filterLabel}</h2>
         </div>
@@ -235,7 +235,7 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props)
         className={`w-full py-4 rounded-xl font-bold text-lg transition-colors shadow-md
           ${
             canStart
-              ? "bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] hover:from-[#162d4a] hover:to-[#1a4f96] text-white"
+              ? "bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] hover:from-[#162d4a] hover:to-[#1d4ed8] text-white"
               : "bg-slate-200 text-slate-400 cursor-not-allowed"
           }`}
       >

@@ -72,7 +72,7 @@ function QuizContent() {
   if (phase === "setup") {
     return (
       <div className="min-h-screen bg-slate-50">
-        <header className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] text-white px-4 py-4 flex items-center gap-3 shadow-md">
+        <header className="bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] text-white px-4 py-4 flex items-center gap-3 shadow-md">
           <Link
             href="/"
             className="text-white/60 hover:text-white text-sm transition-colors"
@@ -98,7 +98,7 @@ function QuizContent() {
   if (phase === "result") {
     return (
       <div className="min-h-screen bg-slate-50">
-        <header className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] text-white px-4 py-4 flex items-center gap-3 shadow-md">
+        <header className="bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] text-white px-4 py-4 flex items-center gap-3 shadow-md">
           <Link
             href="/"
             className="text-white/60 hover:text-white text-sm transition-colors"
@@ -149,7 +149,7 @@ function QuizContent() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <header className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] text-white px-4 py-4 flex items-center gap-3 sticky top-0 z-10 shadow-md">
+      <header className="bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] text-white px-4 py-4 flex items-center gap-3 sticky top-0 z-10 shadow-md">
         <Link
           href="/"
           className="text-white/60 hover:text-white text-sm transition-colors"

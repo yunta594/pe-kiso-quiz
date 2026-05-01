@@ -36,7 +36,7 @@ export default function ResultScreen({
     <div className="space-y-6">
       {/* スコアカード */}
       <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        <div className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] px-6 py-5 text-center">
+        <div className="bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] px-6 py-5 text-center">
           <p className="text-white/70 text-sm mb-1">{filterLabel}</p>
           <p className="text-white font-bold text-xl">演習結果</p>
         </div>
@@ -135,7 +135,7 @@ export default function ResultScreen({
         <div className="flex gap-3 flex-col sm:flex-row">
           <button
             onClick={onRetry}
-            className="flex-1 bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] hover:from-[#162d4a] hover:to-[#1a4f96] text-white font-bold py-4 rounded-xl text-base transition-all"
+            className="flex-1 bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] hover:from-[#162d4a] hover:to-[#1d4ed8] text-white font-bold py-4 rounded-xl text-base transition-all"
           >
             設定を変えてやり直す
           </button>

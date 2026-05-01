@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* ヘッダー */}
-      <header className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] text-white shadow-lg">
+      <header className="bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] text-white shadow-lg">
         <div className="max-w-3xl mx-auto px-4 py-6">
           <p className="text-blue-200 text-sm font-medium mb-1">技術士一次試験</p>
           <h1 className="text-2xl font-bold leading-tight">基礎科目 練習問題</h1>

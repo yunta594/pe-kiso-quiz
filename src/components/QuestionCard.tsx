@@ -31,7 +31,7 @@ export default function QuestionCard({
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
       {/* 問題ヘッダー */}
-      <div className="bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] px-6 py-4 flex items-start justify-between gap-4">
+      <div className="bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] px-6 py-4 flex items-start justify-between gap-4">
         <div className="flex-1">
           <span className="inline-block bg-white/20 text-white text-sm font-medium px-2.5 py-1 rounded-full mb-2">
             {question.yearLabel}　{question.groupLabel}
