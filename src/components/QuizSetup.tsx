@@ -17,7 +17,7 @@ interface Props {
   onStart: (groups: number[], count: number, ordered?: boolean) => void;
 }
 
-const COUNT_OPTIONS = [6, 10, 15, 30] as const;
+const COUNT_OPTIONS = [10, 20, 30, 40, 50] as const;
 const ALL_GROUPS = [1, 2, 3, 4, 5];
 
 export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props) {

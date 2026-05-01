@@ -6,7 +6,7 @@ interface Props {
   title: string;
   children: React.ReactNode;
   defaultOpen?: boolean;
-  variant?: "blue" | "emerald";
+  variant?: "blue" | "emerald" | "orange";
 }
 
 export default function AccordionSection({
@@ -20,6 +20,8 @@ export default function AccordionSection({
   const colors =
     variant === "emerald"
       ? "hover:bg-emerald-50 hover:border-emerald-400 group-hover:text-emerald-700"
+      : variant === "orange"
+      ? "hover:bg-orange-50 hover:border-orange-400 group-hover:text-orange-700"
       : "hover:bg-blue-50 hover:border-blue-400 group-hover:text-blue-700";
 
   return (

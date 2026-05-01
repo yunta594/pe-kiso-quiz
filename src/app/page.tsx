@@ -1,9 +1,11 @@
 import Link from "next/link";
 import AccordionSection from "@/components/AccordionSection";
+import RandomQuizAccordion from "@/components/RandomQuizAccordion";
 import {
   YEAR_LABELS,
   GROUP_LABELS,
   MOCK_LABELS,
+  TOPIC_GROUPS,
   questionsByYear,
   questionsByGroup,
   questionsByMock,
@@ -32,8 +34,8 @@ export default function Home() {
             過去問題演習
           </h2>
 
-          <div className="space-y-6">
-            {/* 年度別 */}
+          <div className="space-y-3">
+            {/* 年度を選ぶ */}
             <AccordionSection title="年度を選ぶ">
               <div className="grid gap-2">
                 {Object.entries(YEAR_LABELS).map(([year, label]) => {
@@ -58,7 +60,7 @@ export default function Home() {
               </div>
             </AccordionSection>
 
-            {/* 問題群別 */}
+            {/* 問題群を選ぶ */}
             <AccordionSection title="問題群を選ぶ">
               <div className="grid gap-2">
                 {Object.entries(GROUP_LABELS).map(([num, label]) => {
@@ -83,61 +85,44 @@ export default function Home() {
               </div>
             </AccordionSection>
 
-            {/* テーマ別 */}
-            <div>
-              <p className="font-bold text-slate-500 text-sm mb-2 flex items-center gap-1.5">
-                <span className="w-1 h-3.5 bg-blue-400 rounded inline-block" />
-                テーマ別
-              </p>
-              <Link
-                href="/topics"
-                className="bg-white hover:bg-blue-50 border-2 border-slate-200 hover:border-blue-400
-                  rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md hover:-translate-y-0.5 group"
-              >
-                <div>
-                  <p className="font-bold text-[17px] text-slate-800 group-hover:text-blue-700 transition-colors">
-                    テーマを選ぶ
-                  </p>
-                  <p className="text-sm text-slate-400 mt-0.5">
-                    確率・統計・アルゴリズム・科学技術史 など
-                  </p>
-                </div>
-                <span className="text-slate-300 group-hover:text-blue-400 text-2xl transition-colors">›</span>
-              </Link>
-            </div>
+            {/* テーマを選ぶ */}
+            <AccordionSection title="テーマを選ぶ">
+              <div className="space-y-3">
+                {TOPIC_GROUPS.map(({ group, topics }) => (
+                  <div key={group}>
+                    <p className="text-xs font-bold text-slate-400 px-2 mb-1">{group}</p>
+                    <div className="grid gap-1.5">
+                      {topics.map((topic) => (
+                        <Link
+                          key={topic}
+                          href={`/quiz?mode=topic&filter=${encodeURIComponent(topic)}`}
+                          className="bg-white hover:bg-blue-50 border border-slate-200 hover:border-blue-400
+                            rounded-xl px-5 py-3 flex items-center justify-between transition-all hover:shadow-sm group"
+                        >
+                          <p className="font-medium text-[16px] text-slate-800 group-hover:text-blue-700 transition-colors">
+                            {topic}
+                          </p>
+                          <span className="text-slate-300 group-hover:text-blue-400 text-xl transition-colors">›</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </AccordionSection>
 
-            {/* ランダム出題演習 */}
-            <div>
-              <p className="font-bold text-slate-500 text-sm mb-2 flex items-center gap-1.5">
-                <span className="w-1 h-3.5 bg-blue-400 rounded inline-block" />
-                ランダム出題演習
-              </p>
-              <Link
-                href="/quiz?mode=random&filter=all"
-                className="bg-white hover:bg-blue-50 border-2 border-slate-200 hover:border-blue-400
-                  rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md hover:-translate-y-0.5 group"
-              >
-                <div>
-                  <p className="font-bold text-[17px] text-slate-800 group-hover:text-blue-700 transition-colors">
-                    ランダム演習
-                  </p>
-                  <p className="text-sm text-slate-400 mt-0.5">
-                    全年度の過去問からランダム出題
-                  </p>
-                </div>
-                <span className="text-slate-300 group-hover:text-blue-400 text-2xl transition-colors">›</span>
-              </Link>
-            </div>
+            {/* ランダム演習 */}
+            <RandomQuizAccordion />
           </div>
         </section>
 
         {/* ===== オリジナル問題による演習 ===== */}
         <section>
-          <h2 className="text-xl font-bold text-emerald-700 mb-4 pb-3 border-b-2 border-emerald-200 flex items-center gap-2">
-            <span className="w-1.5 h-6 bg-emerald-500 rounded inline-block" />
+          <h2 className="text-xl font-bold text-orange-700 mb-4 pb-3 border-b-2 border-orange-200 flex items-center gap-2">
+            <span className="w-1.5 h-6 bg-orange-500 rounded inline-block" />
             オリジナル問題による演習
           </h2>
-          <AccordionSection title="練習問題を解く" variant="emerald">
+          <AccordionSection title="練習問題を解く" variant="orange">
             <div className="grid gap-2">
               {Object.entries(MOCK_LABELS).map(([key, label]) => {
                 const count = questionsByMock[key]?.length ?? 0;
@@ -145,16 +130,16 @@ export default function Home() {
                   <Link
                     key={key}
                     href={`/quiz?mode=mock&filter=${key}`}
-                    className="bg-white hover:bg-emerald-50 border-2 border-slate-200 hover:border-emerald-400
+                    className="bg-white hover:bg-orange-50 border-2 border-slate-200 hover:border-orange-400
                       rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md hover:-translate-y-0.5 group"
                   >
                     <div>
-                      <p className="font-bold text-[17px] text-slate-800 group-hover:text-emerald-700 transition-colors">
+                      <p className="font-bold text-[17px] text-slate-800 group-hover:text-orange-700 transition-colors">
                         {label}
                       </p>
                       <p className="text-sm text-slate-400 mt-0.5">{count}問収録</p>
                     </div>
-                    <span className="text-slate-300 group-hover:text-emerald-400 text-2xl transition-colors">›</span>
+                    <span className="text-slate-300 group-hover:text-orange-400 text-2xl transition-colors">›</span>
                   </Link>
                 );
               })}
