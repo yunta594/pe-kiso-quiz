@@ -143,16 +143,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ランダム */}
+        {/* 10問チャレンジ */}
         <section>
           <Link
-            href="/quiz?mode=random&filter=all"
+            href="/quiz?mode=random&filter=all&autostart=10"
             className="block bg-gradient-to-r from-[#1e3a5f] to-[#1e5ba8] hover:from-[#162d4a] hover:to-[#1a4f96] text-white rounded-xl px-5 py-5
               text-center transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
-            <p className="font-bold text-xl">ランダム演習</p>
+            <p className="font-bold text-xl">10問チャレンジ</p>
             <p className="text-blue-200 text-sm mt-1">
-              過去問全{Object.values(questionsByYear).flat().length}問からランダム出題
+              設定不要・全群からランダム10問をすぐスタート
             </p>
           </Link>
         </section>
@@ -160,7 +160,7 @@ export default function Home() {
         {/* 基礎科目の説明 */}
         <section className="bg-white rounded-2xl border border-slate-200 px-5 py-5">
           <h3 className="font-bold text-slate-700 text-base mb-3">基礎科目について</h3>
-          <div className="text-sm text-slate-500 space-y-1.5 leading-relaxed">
+          <div className="text-[15px] text-slate-500 space-y-1.5 leading-relaxed">
             <p>・1群〜5群から各3問選択、計15問を解答</p>
             <p>・試験時間：60分</p>
             <p>・合格ライン：50%以上（8問以上正解）が目安</p>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, Suspense } from "react";
+import { useState, Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import type { Question } from "@/types";
 import { getQuestions, YEAR_LABELS, GROUP_LABELS, MOCK_LABELS } from "@/data";
@@ -18,10 +18,23 @@ function QuizContent() {
   const mode = params.get("mode") ?? "random";
   const filter = params.get("filter") ?? "all";
 
+  const autostart = params.get("autostart");
+
   const [phase, setPhase] = useState<Phase>("setup");
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>([]);
+
+  useEffect(() => {
+    if (autostart) {
+      const count = parseInt(autostart, 10);
+      const qs = getQuestions(mode, filter, [1, 2, 3, 4, 5], count);
+      setQuestions(qs);
+      setAnswers(new Array(qs.length).fill(null));
+      setCurrentIdx(0);
+      setPhase("quiz");
+    }
+  }, []);
 
   const filterLabel =
     mode === "year"
