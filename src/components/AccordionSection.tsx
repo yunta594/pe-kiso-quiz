@@ -19,7 +19,7 @@ export default function AccordionSection({
 
   const btnClass =
     variant === "orange"
-      ? "bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-700 hover:to-orange-500 border-transparent text-white shadow-sm"
+      ? "bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-600 hover:to-amber-500 border-transparent text-white shadow-sm"
       : "bg-gradient-to-r from-[#1e3a5f] to-[#2563eb] hover:from-[#162d4a] hover:to-[#1d4ed8] border-transparent text-white shadow-sm";
 
   return (

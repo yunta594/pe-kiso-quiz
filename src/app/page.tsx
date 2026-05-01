@@ -118,8 +118,8 @@ export default function Home() {
 
         {/* ===== オリジナル問題による演習 ===== */}
         <section>
-          <h2 className="text-xl font-bold text-orange-700 mb-4 pb-3 border-b-2 border-orange-200 flex items-center gap-2">
-            <span className="w-1.5 h-6 bg-orange-500 rounded inline-block" />
+          <h2 className="text-xl font-bold text-amber-600 mb-4 pb-3 border-b-2 border-amber-200 flex items-center gap-2">
+            <span className="w-1.5 h-6 bg-amber-500 rounded inline-block" />
             オリジナル問題による演習
           </h2>
           <AccordionSection title="練習問題を解く" variant="orange">
@@ -130,16 +130,16 @@ export default function Home() {
                   <Link
                     key={key}
                     href={`/quiz?mode=mock&filter=${key}`}
-                    className="bg-white hover:bg-orange-50 border-2 border-slate-200 hover:border-orange-400
+                    className="bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-400
                       rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md hover:-translate-y-0.5 group"
                   >
                     <div>
-                      <p className="font-bold text-[17px] text-slate-800 group-hover:text-orange-700 transition-colors">
+                      <p className="font-bold text-[17px] text-slate-800 group-hover:text-amber-700 transition-colors">
                         {label}
                       </p>
                       <p className="text-sm text-slate-400 mt-0.5">{count}問収録</p>
                     </div>
-                    <span className="text-slate-300 group-hover:text-orange-400 text-2xl transition-colors">›</span>
+                    <span className="text-slate-300 group-hover:text-amber-400 text-2xl transition-colors">›</span>
                   </Link>
                 );
               })}
