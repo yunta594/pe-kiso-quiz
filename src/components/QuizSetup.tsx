@@ -31,7 +31,7 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props)
     isGroupMode ? [Number(filter)] : ALL_GROUPS
   );
   const [count, setCount] = useState<number>(10);
-  const [ordered, setOrdered] = useState(false);
+  const [ordered, setOrdered] = useState(true);
 
   function toggleGroup(g: number) {
     setSelectedGroups((prev) =>
