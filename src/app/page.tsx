@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AccordionSection from "@/components/AccordionSection";
 import {
   YEAR_LABELS,
   GROUP_LABELS,
@@ -33,11 +34,7 @@ export default function Home() {
 
           <div className="space-y-6">
             {/* 年度別 */}
-            <div>
-              <p className="font-bold text-slate-500 text-sm mb-2 flex items-center gap-1.5">
-                <span className="w-1 h-3.5 bg-blue-400 rounded inline-block" />
-                年度別
-              </p>
+            <AccordionSection title="年度別">
               <div className="grid gap-2">
                 {Object.entries(YEAR_LABELS).map(([year, label]) => {
                   const count = questionsByYear[year]?.length ?? 0;
@@ -59,14 +56,10 @@ export default function Home() {
                   );
                 })}
               </div>
-            </div>
+            </AccordionSection>
 
             {/* 問題群別 */}
-            <div>
-              <p className="font-bold text-slate-500 text-sm mb-2 flex items-center gap-1.5">
-                <span className="w-1 h-3.5 bg-blue-400 rounded inline-block" />
-                問題群別
-              </p>
+            <AccordionSection title="問題群別">
               <div className="grid gap-2">
                 {Object.entries(GROUP_LABELS).map(([num, label]) => {
                   const count = questionsByGroup[Number(num)]?.length ?? 0;
@@ -88,7 +81,7 @@ export default function Home() {
                   );
                 })}
               </div>
-            </div>
+            </AccordionSection>
 
             {/* テーマ別 */}
             <div>
