@@ -17,7 +17,7 @@ export default function TopicsPage() {
   return (
     <div className="min-h-screen bg-slate-100">
       <header className="bg-[#1e3a5f] text-white shadow-lg">
-        <div className="max-w-2xl mx-auto px-4 py-5 flex items-center gap-3">
+        <div className="max-w-3xl mx-auto px-4 py-5 flex items-center gap-3">
           <Link
             href="/"
             className="text-blue-300 hover:text-white transition-colors text-sm"
@@ -29,7 +29,7 @@ export default function TopicsPage() {
         </div>
       </header>
 
-      <main className="max-w-2xl mx-auto px-4 py-8 space-y-8">
+      <main className="max-w-3xl mx-auto px-4 py-8 space-y-8">
         {groupsWithTopics.map(({ group, topics }) => (
           <section key={group}>
             <h2 className="text-base font-bold text-[#1e3a5f] mb-3 flex items-center gap-2">

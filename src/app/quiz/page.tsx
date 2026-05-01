@@ -69,7 +69,7 @@ function QuizContent() {
           <span className="text-white/40">|</span>
           <h1 className="font-bold text-base">{filterLabel}</h1>
         </header>
-        <div className="max-w-2xl mx-auto px-4 py-8">
+        <div className="max-w-3xl mx-auto px-4 py-8">
           <QuizSetup
             mode={mode}
             filter={filter}
@@ -95,7 +95,7 @@ function QuizContent() {
           <span className="text-white/40">|</span>
           <h1 className="font-bold text-base">{filterLabel}</h1>
         </header>
-        <div className="max-w-2xl mx-auto px-4 py-8">
+        <div className="max-w-3xl mx-auto px-4 py-8">
           <ResultScreen
             questions={questions}
             answers={answers}
@@ -152,7 +152,7 @@ function QuizContent() {
         </span>
       </header>
 
-      <div className="max-w-2xl mx-auto px-4 py-6 space-y-5">
+      <div className="max-w-3xl mx-auto px-4 py-6 space-y-5">
         <ProgressBar current={currentIdx + 1} total={questions.length} />
 
         {/* 未回答時の前へボタン */}
