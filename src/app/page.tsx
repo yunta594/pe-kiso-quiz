@@ -34,7 +34,7 @@ export default function Home() {
 
           <div className="space-y-6">
             {/* 年度別 */}
-            <AccordionSection title="年度別">
+            <AccordionSection title="年度を選ぶ">
               <div className="grid gap-2">
                 {Object.entries(YEAR_LABELS).map(([year, label]) => {
                   const count = questionsByYear[year]?.length ?? 0;
@@ -59,7 +59,7 @@ export default function Home() {
             </AccordionSection>
 
             {/* 問題群別 */}
-            <AccordionSection title="問題群別">
+            <AccordionSection title="問題群を選ぶ">
               <div className="grid gap-2">
                 {Object.entries(GROUP_LABELS).map(([num, label]) => {
                   const count = questionsByGroup[Number(num)]?.length ?? 0;
@@ -137,27 +137,29 @@ export default function Home() {
             <span className="w-1.5 h-6 bg-emerald-500 rounded inline-block" />
             オリジナル問題による演習
           </h2>
-          <div className="ml-4 pl-4 border-l-2 border-emerald-200 grid gap-2">
-            {Object.entries(MOCK_LABELS).map(([key, label]) => {
-              const count = questionsByMock[key]?.length ?? 0;
-              return (
-                <Link
-                  key={key}
-                  href={`/quiz?mode=mock&filter=${key}`}
-                  className="bg-white hover:bg-emerald-50 border-2 border-slate-200 hover:border-emerald-400
-                    rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md hover:-translate-y-0.5 group"
-                >
-                  <div>
-                    <p className="font-bold text-[17px] text-slate-800 group-hover:text-emerald-700 transition-colors">
-                      {label}
-                    </p>
-                    <p className="text-sm text-slate-400 mt-0.5">{count}問収録</p>
-                  </div>
-                  <span className="text-slate-300 group-hover:text-emerald-400 text-2xl transition-colors">›</span>
-                </Link>
-              );
-            })}
-          </div>
+          <AccordionSection title="練習問題を解く" variant="emerald">
+            <div className="grid gap-2">
+              {Object.entries(MOCK_LABELS).map(([key, label]) => {
+                const count = questionsByMock[key]?.length ?? 0;
+                return (
+                  <Link
+                    key={key}
+                    href={`/quiz?mode=mock&filter=${key}`}
+                    className="bg-white hover:bg-emerald-50 border-2 border-slate-200 hover:border-emerald-400
+                      rounded-xl px-5 py-4 flex items-center justify-between transition-all hover:shadow-md hover:-translate-y-0.5 group"
+                  >
+                    <div>
+                      <p className="font-bold text-[17px] text-slate-800 group-hover:text-emerald-700 transition-colors">
+                        {label}
+                      </p>
+                      <p className="text-sm text-slate-400 mt-0.5">{count}問収録</p>
+                    </div>
+                    <span className="text-slate-300 group-hover:text-emerald-400 text-2xl transition-colors">›</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </AccordionSection>
         </section>
 
         {/* 基礎科目の説明 */}

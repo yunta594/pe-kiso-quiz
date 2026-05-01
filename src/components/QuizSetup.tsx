@@ -24,6 +24,8 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props)
   const isGroupMode = mode === "group";
   const isTopicMode = mode === "topic";
   const isYearMode = mode === "year";
+  const isMockMode = mode === "mock";
+  const showOrderToggle = isYearMode || isMockMode;
   const showGroupSelect = !isGroupMode && !isTopicMode;
   const fixedGroup = isGroupMode ? Number(filter) : null;
 
@@ -153,8 +155,8 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props)
             </div>
           )}
 
-          {/* 出題順トグル（年度別のみ） */}
-          {isYearMode && (
+          {/* 出題順トグル（年度別・練習問題） */}
+          {showOrderToggle && (
             <div>
               <p className="font-bold text-slate-700 text-base mb-3 flex items-center gap-2">
                 <span className="w-1 h-4 bg-blue-600 rounded inline-block" />
