@@ -27,7 +27,7 @@ export default function Home() {
         <section>
           <h2 className="text-lg font-bold text-[#1e3a5f] mb-4 flex items-center gap-2">
             <span className="w-1 h-5 bg-blue-600 rounded inline-block" />
-            年度別で学習する
+            過去問題を学習する
           </h2>
           <div className="grid gap-3">
             {Object.entries(YEAR_LABELS).map(([year, label]) => {
@@ -114,7 +114,7 @@ export default function Home() {
         <section>
           <h2 className="text-lg font-bold text-[#1e3a5f] mb-2 flex items-center gap-2">
             <span className="w-1 h-5 bg-amber-500 rounded inline-block" />
-            練習問題（模擬試験）
+            練習問題で学習する
           </h2>
           <div className="grid gap-3">
             {Object.entries(MOCK_LABELS).map(([key, label]) => {

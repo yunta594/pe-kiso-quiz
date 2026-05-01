@@ -34,8 +34,8 @@ function QuizContent() {
       ? filter
       : "ランダム演習";
 
-  function handleStart(groups: number[], count: number) {
-    const qs = getQuestions(mode, filter, groups, count);
+  function handleStart(groups: number[], count: number, ordered?: boolean) {
+    const qs = getQuestions(mode, filter, groups, count, ordered);
     setQuestions(qs);
     setAnswers(new Array(qs.length).fill(null));
     setCurrentIdx(0);

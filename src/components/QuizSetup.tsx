@@ -14,7 +14,7 @@ interface Props {
   mode: string;
   filter: string;
   filterLabel: string;
-  onStart: (groups: number[], count: number) => void;
+  onStart: (groups: number[], count: number, ordered?: boolean) => void;
 }
 
 const COUNT_OPTIONS = [6, 10, 15, 30] as const;
@@ -23,6 +23,7 @@ const ALL_GROUPS = [1, 2, 3, 4, 5];
 export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props) {
   const isGroupMode = mode === "group";
   const isTopicMode = mode === "topic";
+  const isYearMode = mode === "year";
   const showGroupSelect = !isGroupMode && !isTopicMode;
   const fixedGroup = isGroupMode ? Number(filter) : null;
 
@@ -30,6 +31,7 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props)
     isGroupMode ? [Number(filter)] : ALL_GROUPS
   );
   const [count, setCount] = useState<number>(10);
+  const [ordered, setOrdered] = useState(false);
 
   function toggleGroup(g: number) {
     setSelectedGroups((prev) =>
@@ -61,7 +63,7 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props)
 
   const available = getAvailable();
   const canStart = (showGroupSelect ? selectedGroups.length > 0 : true) && available > 0;
-  const startCount = isTopicMode ? available : count;
+  const startCount = (isTopicMode || ordered) ? available : count;
 
   return (
     <div className="space-y-5">
@@ -151,8 +153,45 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props)
             </div>
           )}
 
-          {/* 問題数選択（テーマ別以外） */}
-          {!isTopicMode && (
+          {/* 出題順トグル（年度別のみ） */}
+          {isYearMode && (
+            <div>
+              <p className="font-bold text-slate-700 text-base mb-3 flex items-center gap-2">
+                <span className="w-1 h-4 bg-blue-600 rounded inline-block" />
+                出題順
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  onClick={() => setOrdered(false)}
+                  className={`py-3 rounded-xl border-2 font-medium text-[15px] transition-all
+                    ${!ordered
+                      ? "border-blue-600 bg-blue-600 text-white"
+                      : "border-slate-200 bg-white text-slate-700 hover:border-blue-400"
+                    }`}
+                >
+                  ランダム
+                </button>
+                <button
+                  onClick={() => setOrdered(true)}
+                  className={`py-3 rounded-xl border-2 font-medium text-[15px] transition-all
+                    ${ordered
+                      ? "border-blue-600 bg-blue-600 text-white"
+                      : "border-slate-200 bg-white text-slate-700 hover:border-blue-400"
+                    }`}
+                >
+                  問題番号順
+                </button>
+              </div>
+              {ordered && (
+                <p className="text-slate-500 text-sm mt-2">
+                  選択した群の全 {available} 問を番号順に出題します
+                </p>
+              )}
+            </div>
+          )}
+
+          {/* 問題数選択（テーマ別・番号順以外） */}
+          {!isTopicMode && !ordered && (
             <div>
               <p className="font-bold text-slate-700 text-base mb-3 flex items-center gap-2">
                 <span className="w-1 h-4 bg-blue-600 rounded inline-block" />
@@ -189,7 +228,7 @@ export default function QuizSetup({ mode, filter, filterLabel, onStart }: Props)
       </div>
 
       <button
-        onClick={() => canStart && onStart(selectedGroups, startCount)}
+        onClick={() => canStart && onStart(selectedGroups, startCount, ordered)}
         disabled={!canStart}
         className={`w-full py-4 rounded-xl font-bold text-lg transition-colors shadow-md
           ${

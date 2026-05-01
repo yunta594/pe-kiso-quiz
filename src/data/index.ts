@@ -137,7 +137,8 @@ export function getQuestions(
   mode: string,
   filter: string,
   groups: number[],
-  count: number
+  count: number,
+  ordered?: boolean
 ): Question[] {
   let pool: Question[];
 
@@ -162,7 +163,7 @@ export function getQuestions(
     pool = pool.filter((q) => groups.includes(q.group));
   }
 
-  shuffle(pool);
+  if (!ordered) shuffle(pool);
   return pool.slice(0, Math.min(count, pool.length));
 }
 
