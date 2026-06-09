@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import type { Question } from "@/types";
+import { renderWithOverlines } from "@/utils/renderText";
 
 interface Props {
   question: Question;
@@ -99,7 +100,7 @@ export default function ExplanationPanel({
           解説
         </h3>
         <p className="text-[17px] leading-relaxed text-slate-700 whitespace-pre-wrap">
-          {question.explanation}
+          {renderWithOverlines(question.explanation)}
         </p>
 
         {/* 解説図 */}

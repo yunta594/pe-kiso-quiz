@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import type { Question } from "@/types";
+import { renderWithOverlines } from "@/utils/renderText";
 
 interface Props {
   question: Question;
@@ -46,7 +47,7 @@ export default function QuestionCard({
       <div className="px-6 pt-5 pb-2">
         {/* 問題文 */}
         <p className="text-[17px] leading-relaxed text-slate-800 whitespace-pre-wrap">
-          {question.question}
+          {renderWithOverlines(question.question)}
         </p>
         {/* 問題図 */}
         {question.image && (
@@ -84,7 +85,7 @@ export default function QuestionCard({
             disabled={answered}
           >
             <span className="font-bold mr-2 text-blue-700">{NUMS[idx]}</span>
-            <span>{choice.replace(/^[①②③④⑤]\s*/, "")}</span>
+            <span>{renderWithOverlines(choice.replace(/^[①②③④⑤]\s*/, ""))}</span>
           </button>
         ))}
       </div>
