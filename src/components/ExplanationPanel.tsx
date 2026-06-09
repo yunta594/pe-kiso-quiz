@@ -28,8 +28,6 @@ export default function ExplanationPanel({
   const [aiExplanation, setAiExplanation] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [aiError, setAiError] = useState<string | null>(null);
-  const [reportOpen, setReportOpen] = useState(false);
-  const [reportText, setReportText] = useState("");
 
   async function handleAiExplain() {
     if (loading || aiExplanation) return;
@@ -54,21 +52,6 @@ export default function ExplanationPanel({
     } finally {
       setLoading(false);
     }
-  }
-
-  function handleReport() {
-    if (!reportText.trim()) return;
-    const subject = encodeURIComponent(
-      `解説の誤り報告 [${question.id}]`
-    );
-    const body = encodeURIComponent(
-      `問題ID: ${question.id}\n` +
-        `問題文: ${question.question.slice(0, 80)}...\n\n` +
-        `【報告内容】\n${reportText}`
-    );
-    window.open(`mailto:?subject=${subject}&body=${body}`);
-    setReportText("");
-    setReportOpen(false);
   }
 
   return (
@@ -175,53 +158,6 @@ export default function ExplanationPanel({
           </div>
         )}
 
-        {/* 誤り報告 */}
-        <div className="mt-5 pt-4 border-t border-slate-100">
-          {!reportOpen ? (
-            <button
-              onClick={() => setReportOpen(true)}
-              className="text-xs text-slate-400 hover:text-slate-600 underline transition-colors"
-            >
-              解説に誤りを見つけたら報告
-            </button>
-          ) : (
-            <div className="space-y-2">
-              <p className="text-xs font-medium text-slate-600">
-                誤りの内容を入力してください（問題ID: {question.id}）
-              </p>
-              <textarea
-                value={reportText}
-                onChange={(e) => setReportText(e.target.value)}
-                placeholder="例：選択肢②の説明が逆になっています..."
-                rows={3}
-                className="w-full text-sm border border-slate-300 rounded-lg px-3 py-2 resize-none focus:outline-none focus:border-blue-400"
-              />
-              <div className="flex gap-2">
-                <button
-                  onClick={handleReport}
-                  disabled={!reportText.trim()}
-                  className={`text-sm px-4 py-1.5 rounded-lg font-medium transition-colors
-                    ${
-                      reportText.trim()
-                        ? "bg-slate-700 hover:bg-slate-800 text-white"
-                        : "bg-slate-200 text-slate-400 cursor-not-allowed"
-                    }`}
-                >
-                  メールで報告
-                </button>
-                <button
-                  onClick={() => {
-                    setReportOpen(false);
-                    setReportText("");
-                  }}
-                  className="text-sm px-4 py-1.5 rounded-lg text-slate-500 hover:text-slate-700 transition-colors"
-                >
-                  キャンセル
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
       </div>
 
       {/* ナビゲーション */}
