@@ -309,6 +309,7 @@ export const r06Questions: Question[] = [
     answer: 5,
     explanation:
       "ニュートン・ラフソン法の反復式：\nxₙ₊₁ ＝ xₙ－f(xₙ)/f'(xₙ)\n\nつまり更新量：Δx ＝ xₙ₊₁－xₙ ＝ -f(xₙ)/f'(xₙ)\n→（ア）: Δx ← -f(xₙ)/f'(xₙ)\n\n収束判定：更新量の絶対値がしきい値εより小さくなったら収束と見なす。\n→（イ）: |Δx|＜ε（YESなら収束→出力）\n\nよって⑤が正解。",
+    image: "/images/r6-3-3.png",
     tags: ["数値解析"],
   },
   {
