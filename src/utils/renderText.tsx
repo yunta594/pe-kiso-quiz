@@ -1,18 +1,20 @@
 import React from "react";
 
 /**
- * Combining overline (U+0305) を CSS text-decoration:overline に変換して JSX を返す。
+ * Combining macron (U+0304) / combining overline (U+0305) を
+ * CSS text-decoration:overline に変換して JSX を返す。
  * whitespace-pre-wrap コンテナ内でそのまま使用可能。
  */
 export function renderWithOverlines(text: string): React.ReactNode {
-  if (!text.includes("̅")) return text;
+  if (!text.includes("̄") && !text.includes("̅")) return text;
 
   const parts: React.ReactNode[] = [];
   let i = 0;
   let buf = "";
 
   while (i < text.length) {
-    if (text[i + 1] === "̅") {
+    const next = text[i + 1];
+    if (next === "̄" || next === "̅") {
       if (buf) { parts.push(buf); buf = ""; }
       parts.push(
         <span key={i} style={{ textDecoration: "overline" }}>
